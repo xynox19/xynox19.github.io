@@ -1,7 +1,7 @@
 // script.js
 const projects = [
     {
-      name: "Portfolio Website",
+      name: "Portfolio Website source code",
       url: "https://github.com/sethis8/xynox19.github.io"
     },
     {
