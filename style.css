@@ -14,14 +14,23 @@
   header {
     background-color: #0f172a;
     color: white;
-    padding: 2rem;
+    padding: 1.5rem; /* Reduced padding */
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
-  
+
+  h1 {
+    font-size: 2rem; /* Reduced font size */
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem; /* Adjusted font size for paragraph */
+  }
+
   nav {
     margin-top: 1rem;
   }
