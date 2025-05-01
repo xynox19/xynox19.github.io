@@ -2,7 +2,7 @@
 const projects = [
     {
       name: "Portfolio Website source code",
-      url: "https://github.com/sethis8/xynox19.github.io"
+      url: "https://github.com/xynox19/xynox19.github.io"
     },
     {
       name: "Data Analysis CW - Pandas/Dask",
