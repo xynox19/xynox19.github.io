@@ -133,4 +133,23 @@
     font-size: 0.9rem;
     color: #cbd5e1;
   }
+  .socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .socials img {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .socials img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
   
