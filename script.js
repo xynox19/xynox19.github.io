@@ -2,15 +2,15 @@
 const projects = [
     {
       name: "Portfolio Website",
-      url: "https://github.com/yourusername/portfolio"
+      url: "https://github.com/sethis8/xynox19.github.io"
     },
     {
-      name: "AI Chatbot",
-      url: "https://github.com/yourusername/ai-chatbot"
+      name: "Data Analysis CW - Pandas/Dask",
+      url: "https://github.coventry.ac.uk/sethis8/data-science-cw"
     },
     {
-      name: "Weather App",
-      url: "https://github.com/yourusername/weather-app"
+      name: "Website for Animal Conservation (WIP)",
+      url: "https://github.coventry.ac.uk/douses/KomodoHub"
     }
   ];
   
