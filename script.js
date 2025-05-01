@@ -11,6 +11,10 @@ const projects = [
     {
       name: "Website for Animal Conservation (WIP)",
       url: "https://github.coventry.ac.uk/douses/KomodoHub"
+    },
+    {
+      name: "IoT simulation using MQTT protocol (Smart Home Sim)",
+      url: "https://github.coventry.ac.uk/4005CMD2324JANMAY/HRCTSS-HomeSystem"
     }
   ];
   
