@@ -15,6 +15,10 @@ const projects = [
     {
       name: "IoT simulation using MQTT protocol (Smart Home Sim)",
       url: "https://github.coventry.ac.uk/4005CMD2324JANMAY/HRCTSS-HomeSystem"
+    },
+    {
+      name: "Zork style text adventure game",
+      url: "https://github.com/xynox19/aperture-text-game/tree/main"
     }
   ];
   
