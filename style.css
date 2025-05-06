@@ -7,7 +7,7 @@
   .section::before {
     content: "";
     display: block;
-    height: 112px;  /* or your header height */
+    height: 112px; 
     margin-top: -112px;
     visibility: hidden;
   }  
@@ -31,10 +31,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
-  header h1 {
-    font-size: 2rem; 
-    margin: 0.5rem 0;
+  header.shrink h1 {
+    font-size: 1.5rem;
+    margin-top: 0;
   }
+  
   
   header p {
     font-size: 1rem; 
