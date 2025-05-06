@@ -2,16 +2,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  
-  .section::before {
-    content: "";
-    display: block;
-    height: 120px; /* adjust this to match or slightly exceed your header height */
-    margin-top: -120px;
-    visibility: hidden;
-  }  
   
   .section h2 {
     scroll-margin-top: 140px; /* Adjust based on your header height */
@@ -31,6 +22,7 @@
     padding: 2rem 0;
     text-align: center;
     position: sticky;
+    font-family: 'Courier New', Courier, monospace;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
