@@ -4,6 +4,10 @@
     scroll-behavior: smooth;
   }
   
+  html {
+    scroll-padding-top: 100px; /* adjust based on your header height */
+  }
+  
   body {
     margin: 0;
     font-family: 'Roboto Mono', sans-serif;
