@@ -5,8 +5,8 @@
   }
   
   html {
-    scroll-padding-top: 100px; /* adjust based on your header height */
-  }
+    scroll-padding-top: 140px; /* or however tall your header is */
+  }  
   
   body {
     margin: 0;
