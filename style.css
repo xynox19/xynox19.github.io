@@ -4,10 +4,13 @@
     scroll-behavior: smooth;
   }
   
-  .section h2 {
-    scroll-margin-top: 140px; /* Adjust based on your header height */
-  }
-  
+  .section::before {
+    content: "";
+    display: block;
+    height: 112px;  /* or your header height */
+    margin-top: -112px;
+    visibility: hidden;
+  }  
   
   body {
     margin: 0;

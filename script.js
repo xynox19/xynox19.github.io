@@ -38,13 +38,29 @@ const projectList = document.getElementById("project-list");
     projectList.appendChild(card);
   });
   
-  //scroll shortens the header so that navbar is visble
-  window.addEventListener("scroll", () => {
-    const header = document.getElementById("main-header");
-    if (window.scrollY > 60) {
-      header.classList.add("shrink");
-    } else {
-      header.classList.remove("shrink");
-    }
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const sections = document.querySelectorAll(".section");
+  
+    const updateScrollOffsets = () => {
+      const headerHeight = header.offsetHeight;
+  
+      sections.forEach((section) => {
+        section.style.scrollMarginTop = `${headerHeight + 10}px`; // +10 for spacing
+      });
+    };
+  
+    // Shrink header on scroll
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("shrink");
+      } else {
+        header.classList.remove("shrink");
+      }
+      updateScrollOffsets(); // Adjust margin when header shrinks
+    });
+  
+    updateScrollOffsets(); // Initial setup
   });
+  
   
