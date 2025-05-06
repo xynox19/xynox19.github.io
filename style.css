@@ -13,6 +13,11 @@
     visibility: hidden;
   }  
   
+  .section h2 {
+    scroll-margin-top: 140px; /* Adjust based on your header height */
+  }
+  
+  
   body {
     margin: 0;
     font-family: 'Roboto Mono', sans-serif;
