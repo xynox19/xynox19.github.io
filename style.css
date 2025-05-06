@@ -49,7 +49,7 @@
   header.shrink p {
     font-size: 0.8rem;
     transition: font-size 0.3s ease;
-  }  
+  }
 
   nav {
     margin-top: 1rem;
@@ -85,6 +85,31 @@
     to { opacity: 1; transform: translateY(0); }
   }
   
+  .section h2.highlight {
+    animation: highlightFade 1.2s ease-out;
+    background-color: rgba(180, 200, 255, 0.1); /* soft blue-lavender */
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  @keyframes highlightFade {
+    0% {
+      background-color: rgba(180, 200, 255, 0.4); /* light lavender-blue */
+      color: #e0e7ff; /* soft white-blue */
+      transform: scale(1.03);
+    }
+    50% {
+      background-color: rgba(180, 200, 255, 0.2);
+      transform: scale(1.01);
+    }
+    100% {
+      background-color: transparent;
+      color: inherit;
+      transform: scale(1);
+    }
+  }
+  
+
   h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;

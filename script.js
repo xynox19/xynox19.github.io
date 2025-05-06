@@ -38,12 +38,28 @@ const projectList = document.getElementById("project-list");
     projectList.appendChild(card);
   });
   
+  const highlightSectionTitle = (id) => {
+    const section = document.querySelector(id);
+    if (!section) return;
+  
+    const title = section.querySelector("h2");
+    if (!title) return;
+  
+    // Remove previous highlight in case it's still fading
+    title.classList.remove("highlight");
+  
+    // Force reflow to restart animation
+    void title.offsetWidth;
+  
+    // Apply highlight class
+    title.classList.add("highlight");
+  };
+  
   document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     const sections = document.querySelectorAll(".section");
   
     const getShrinkedHeaderHeight = () => {
-      // Temporarily add the shrink class to measure the small height
       header.classList.add("shrink");
       const height = header.offsetHeight;
       header.classList.remove("shrink");
@@ -52,9 +68,8 @@ const projectList = document.getElementById("project-list");
   
     const updateScrollOffsets = () => {
       const targetHeight = getShrinkedHeaderHeight();
-  
       sections.forEach((section) => {
-        section.style.scrollMarginTop = `${targetHeight + 5}px`; // small extra buffer
+        section.style.scrollMarginTop = `${targetHeight + 5}px`;
       });
     };
   
@@ -67,6 +82,16 @@ const projectList = document.getElementById("project-list");
       }
     });
   
-    updateScrollOffsets(); // Set it once using the shrunk header height
+    updateScrollOffsets();
+  
+    // Highlight title on hash change (navbar click)
+    window.addEventListener("hashchange", () => {
+      highlightSectionTitle(location.hash);
+    });
+  
+    // Also handle initial load with hash
+    if (location.hash) {
+      setTimeout(() => highlightSectionTitle(location.hash), 300);
+    }
   });
   
