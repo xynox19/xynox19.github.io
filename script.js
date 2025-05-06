@@ -45,8 +45,9 @@ const projectList = document.getElementById("project-list");
     const updateScrollOffsets = () => {
       const headerHeight = header.offsetHeight;
   
+      // Apply scroll margin to ensure sections align directly under the header
       sections.forEach((section) => {
-        section.style.scrollMarginTop = `${headerHeight + 10}px`; // +10 for spacing
+        section.style.scrollMarginTop = `${headerHeight}px`; // Dynamically adjust for header height
       });
     };
   
