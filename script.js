@@ -53,18 +53,14 @@ const projectList = document.getElementById("project-list");
       });
     };
   
-    // Shrink header on scroll
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header.classList.add("shrink");
-      } else {
-        header.classList.remove("shrink");
-      }
+l
+  // Just update offsets once on load — no shrink behavior
+updateScrollOffsets();
+
   
       // Wait for class change to apply, then update offsets
       requestAnimationFrame(updateScrollOffsets);
     });
   
     updateScrollOffsets();
-  });
   
