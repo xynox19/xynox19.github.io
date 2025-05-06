@@ -38,29 +38,32 @@ const projectList = document.getElementById("project-list");
     projectList.appendChild(card);
   });
   
-  document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector("header");
-    const sections = document.querySelectorAll(".section");
-  
-    const getCurrentHeaderHeight = () => {
-      return header.offsetHeight;
-    };
-  
-    const updateScrollOffsets = () => {
-      const headerHeight = getCurrentHeaderHeight();
-      sections.forEach((section) => {
-        section.style.scrollMarginTop = `${headerHeight + 5}px`;
-      });
-    };
-  
-l
-  // Just update offsets once on load — no shrink behavior
-updateScrollOffsets();
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const sections = document.querySelectorAll(".section");
 
-  
-      // Wait for class change to apply, then update offsets
-      requestAnimationFrame(updateScrollOffsets);
+  const getCurrentHeaderHeight = () => {
+    return header.offsetHeight;
+  };
+
+  const updateScrollOffsets = () => {
+    const headerHeight = getCurrentHeaderHeight();
+    sections.forEach((section) => {
+      section.style.scrollMarginTop = `${headerHeight + 5}px`;
     });
-  
-    updateScrollOffsets();
-  
+  };
+
+  // Shrink header on scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+
+    // Wait for class change to apply, then update offsets
+    requestAnimationFrame(updateScrollOffsets);
+  });
+
+  updateScrollOffsets();
+});
