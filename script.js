@@ -22,7 +22,8 @@ const projects = [
     }
   ];
   
-  const projectList = document.getElementById("project-list");
+//project display
+const projectList = document.getElementById("project-list");
   
   projects.forEach(project => {
     const card = document.createElement("div");
@@ -35,5 +36,15 @@ const projects = [
   
     card.appendChild(link);
     projectList.appendChild(card);
+  });
+  
+  //scroll shortens the header so that navbar is visble
+  window.addEventListener("scroll", () => {
+    const header = document.getElementById("main-header");
+    if (window.scrollY > 60) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
   });
   
