@@ -42,12 +42,19 @@ const projectList = document.getElementById("project-list");
     const header = document.querySelector("header");
     const sections = document.querySelectorAll(".section");
   
-    const updateScrollOffsets = () => {
-      const headerHeight = header.offsetHeight;
+    const getShrinkedHeaderHeight = () => {
+      // Temporarily add the shrink class to measure the small height
+      header.classList.add("shrink");
+      const height = header.offsetHeight;
+      header.classList.remove("shrink");
+      return height;
+    };
   
-      // Apply scroll margin to ensure sections align directly under the header
+    const updateScrollOffsets = () => {
+      const targetHeight = getShrinkedHeaderHeight();
+  
       sections.forEach((section) => {
-        section.style.scrollMarginTop = `${headerHeight}px`; // Dynamically adjust for header height
+        section.style.scrollMarginTop = `${targetHeight + 5}px`; // small extra buffer
       });
     };
   
@@ -58,10 +65,8 @@ const projectList = document.getElementById("project-list");
       } else {
         header.classList.remove("shrink");
       }
-      updateScrollOffsets(); // Adjust margin when header shrinks
     });
   
-    updateScrollOffsets(); // Initial setup
+    updateScrollOffsets(); // Set it once using the shrunk header height
   });
-  
   
