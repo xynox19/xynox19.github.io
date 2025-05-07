@@ -66,6 +66,14 @@
   nav a:hover {
     color: #a78bfa;
   }
+
+  nav a.flash {
+    background-color: #facc15;
+    color: #0f172a;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.4s, color 0.4s;
+  }
   
   .container {
     max-width: 960px;

@@ -41,32 +41,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   const sections = document.querySelectorAll(".section");
 
+  const navLinks = document.querySelectorAll("nav a"); // ✅ FIXED LINE
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      link.classList.add("flash");
+      setTimeout(() => {
+        link.classList.remove("flash");
+      }, 1000); // 1 second flash
+    });
+  });
+
   const getCurrentHeaderHeight = () => {
-      return header.offsetHeight;
+    return header.offsetHeight;
   };
 
   const updateScrollOffsets = () => {
-      const headerHeight = getCurrentHeaderHeight();
-      sections.forEach((section) => {
-          section.style.scrollMarginTop = `${headerHeight + 5}px`;
-      });
+    const headerHeight = getCurrentHeaderHeight();
+    sections.forEach((section) => {
+      section.style.scrollMarginTop = `${headerHeight + 5}px`;
+    });
   };
 
-  // Run this once when the page loads
   updateScrollOffsets();
 
-  // Shrink header on scroll
   window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-          header.classList.add("shrink");
-      } else {
-          header.classList.remove("shrink");
-      }
-
-      // Wait a tiny bit for CSS transition to complete
-      setTimeout(updateScrollOffsets, 300); // Match the transition duration
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+    setTimeout(updateScrollOffsets, 300);
   });
 
-  // Update scroll offset on window resize (optional, but recommended)
   window.addEventListener("resize", updateScrollOffsets);
 });
