@@ -14,7 +14,7 @@
   
   body {
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto Mono', monospace;
     background: linear-gradient(135deg, #1e3a8a, #6d28d9);
     color: #f1f5f9;
   }
