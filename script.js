@@ -44,16 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   const sections = document.querySelectorAll(".section");
 
-  const navLinks = document.querySelectorAll("nav a"); // ✅ FIXED LINE
-
   navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      link.classList.add("flash");
-      setTimeout(() => {
-        link.classList.remove("flash");
-      }, 1000); // 1 second flash
+    link.addEventListener("click", (e) => {
+      const targetId = link.getAttribute("href").substring(1); // e.g. "projects"
+      const targetSection = document.getElementById(targetId);
+      const targetHeading = targetSection?.querySelector("h2");
+
+      if (targetHeading) {
+        targetHeading.classList.add("highlight");
+        setTimeout(() => {
+          targetHeading.classList.remove("highlight");
+        }, 1000); // highlight lasts for 1 second
+      }
     });
   });
+
+  const navLinks = document.querySelectorAll("nav a");
 
   const getCurrentHeaderHeight = () => {
     return header.offsetHeight;
