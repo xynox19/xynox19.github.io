@@ -17,8 +17,9 @@ const projects = [
   },
   {
     name: "GCSE NEA - Zork-styled text adventure game",
-    url: "https://github.com/xynox19/aperture-text-game/tree/main",
-
+    url: "https://github.com/xynox19/aperture-text-game/tree/main"
+  },
+  {
     name: "GCSE NEA - Membership system",
     url: "https://github.com/xynox19/membership-system-NEA"
   }
