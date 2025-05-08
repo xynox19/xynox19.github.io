@@ -16,8 +16,11 @@ const projects = [
     url: "https://github.coventry.ac.uk/4005CMD2324JANMAY/HRCTSS-HomeSystem"
   },
   {
-    name: "Zork style text adventure game",
-    url: "https://github.com/xynox19/aperture-text-game/tree/main"
+    name: "GCSE NEA - Zork-styled text adventure game",
+    url: "https://github.com/xynox19/aperture-text-game/tree/main",
+
+    name: "GCSE NEA - Membership system",
+    url: "https://github.com/xynox19/membership-system-NEA"
   }
 ];
 
