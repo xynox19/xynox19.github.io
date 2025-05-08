@@ -131,13 +131,19 @@ projects.forEach(project => {
   projectList.appendChild(card);
 });
 
+// DOM interaction
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  // Load experience cards
   renderExperiences();
+
+  // Navigation highlighting
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
-      const targetId = link.getAttribute("href").substring(1); // e.g. "projects"
+      const targetId = link.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
       const targetHeading = targetSection?.querySelector("h2");
 
@@ -145,13 +151,12 @@ document.addEventListener("DOMContentLoaded", () => {
         targetHeading.classList.add("highlight");
         setTimeout(() => {
           targetHeading.classList.remove("highlight");
-        }, 1000); // highlight lasts for 1 second
+        }, 1000);
       }
     });
   });
 
-  const navLinks = document.querySelectorAll("nav a");
-
+  // Header shrink behavior
   const getCurrentHeaderHeight = () => {
     return header.offsetHeight;
   };
