@@ -112,6 +112,10 @@ const projects = [
   {
     name: "GCSE NEA - Membership system",
     url: "https://github.com/xynox19/membership-system-NEA"
+  },
+  {
+    name: "Multilayer Perceptron Simulation",
+    url: "https://github.com/xynox19/multilayer-perceptron-simulation"
   }
 ];
 
