@@ -94,16 +94,24 @@ const projects = [
     url: "https://github.com/xynox19/xynox19.github.io"
   },
   {
-    name: "Data Analysis CW - Pandas/Dask",
-    url: "https://github.coventry.ac.uk/sethis8/data-science-cw"
-  },
-  {
-    name: "Website for Animal Conservation (WIP)",
+    name: "KomodoHub Animal Conservation (WIP)",
     url: "https://github.coventry.ac.uk/douses/KomodoHub"
   },
   {
-    name: "IoT simulation using MQTT protocol (Smart Home Sim)",
+    name: "Smart Home IoT simulation (using MQTT)",
     url: "https://github.coventry.ac.uk/4005CMD2324JANMAY/HRCTSS-HomeSystem"
+  },
+  {
+    name: "Multilayer Perceptron Simulation",
+    url: "https://github.com/xynox19/multilayer-perceptron-simulation"
+  },
+  {
+    name: "TCP Client/Server Model",
+    url: "https://github.com/xynox19/multithreading-server"
+  },
+  {
+    name: "Pandas/Dask Large Dataset Analysis",
+    url: "https://github.coventry.ac.uk/sethis8/data-science-cw"
   },
   {
     name: "GCSE NEA - Zork-styled text adventure game",
@@ -112,10 +120,6 @@ const projects = [
   {
     name: "GCSE NEA - Membership system",
     url: "https://github.com/xynox19/membership-system-NEA"
-  },
-  {
-    name: "Multilayer Perceptron Simulation",
-    url: "https://github.com/xynox19/multilayer-perceptron-simulation"
   }
 ];
 
