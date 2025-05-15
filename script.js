@@ -98,6 +98,10 @@ const projects = [
     url: "https://github.coventry.ac.uk/douses/KomodoHub"
   },
   {
+    name: "AI-powered Chatbot",
+    url: "https://github.com/xynox19/chatbot-ai-info",
+  },
+  {
     name: "Smart Home IoT simulation (using MQTT)",
     url: "https://github.coventry.ac.uk/4005CMD2324JANMAY/HRCTSS-HomeSystem"
   },
