@@ -1,3 +1,4 @@
+// Work Experience data
 const experiences = [
   {
     company: "Three UK",
@@ -71,23 +72,51 @@ const experiences = [
   },
 ];
 
+// Categorized rendering of experience
 function renderExperiences() {
-  const container = document.getElementById("experience-list");
+  const experienceContainer = document.getElementById("experience-list");
+
+  const industryList = document.createElement("div");
+  const volunteerList = document.createElement("div");
+
+  const industryHeading = document.createElement("h3");
+  industryHeading.textContent = "Professional & Industry Experience";
+  industryList.appendChild(industryHeading);
+
+  const volunteerHeading = document.createElement("h3");
+  volunteerHeading.textContent = "Volunteering & Leadership";
+  volunteerList.appendChild(volunteerHeading);
+
   experiences.forEach((exp) => {
     const card = document.createElement("div");
     card.className = "experience-card";
-
     card.innerHTML = `
-      <h3>${exp.position} @ ${exp.company}</h3>
+      <h4>${exp.position} @ ${exp.company}</h4>
       <p class="meta">${exp.date} | ${exp.location}</p>
       <ul>
         ${exp.description.map(item => `<li>${item}</li>`).join("")}
       </ul>
     `;
-    container.appendChild(card);
+
+    const isVolunteer = [
+      "Volunteer",
+      "Executive Officer",
+      "Tutor",
+      "Exam Paper Creator"
+    ].some(role => exp.position.includes(role));
+
+    if (isVolunteer) {
+      volunteerList.appendChild(card);
+    } else {
+      industryList.appendChild(card);
+    }
   });
+
+  experienceContainer.appendChild(industryList);
+  experienceContainer.appendChild(volunteerList);
 }
 
+// Project data
 const projects = [
   {
     name: "Portfolio Website source code",
@@ -136,22 +165,28 @@ const projects = [
   }
 ];
 
-// Project display
-const projectList = document.getElementById("project-list");
+// Project rendering
+function renderProjects() {
+  const projectList = document.getElementById("project-list");
 
-projects.forEach(project => {
-  const card = document.createElement("div");
-  card.className = "project-card";
+  projects.forEach(project => {
+    const card = document.createElement("div");
+    card.className = "project-card";
 
-  const link = document.createElement("a");
-  link.href = project.url;
-  link.textContent = project.name;
-  link.target = "_blank";
+    const link = document.createElement("a");
+    link.href = project.url;
+    link.textContent = project.name;
+    link.target = "_blank";
 
-  const description = document.createElement("p");
-  description.textContent = project.desc || "No description provided.";
+    const description = document.createElement("p");
+    description.textContent = project.desc || "No description provided.";
 
-  card.appendChild(link);
-  card.appendChild(description);
-  projectList.appendChild(card);
-});
+    card.appendChild(link);
+    card.appendChild(description);
+    projectList.appendChild(card);
+  });
+}
+
+// Initialize both sections
+renderExperiences();
+renderProjects();
