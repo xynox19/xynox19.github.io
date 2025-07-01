@@ -1,4 +1,4 @@
-// Work Experience data
+// EXPERIENCE DATA
 const experiences = [
   {
     company: "Three UK",
@@ -72,7 +72,7 @@ const experiences = [
   },
 ];
 
-// Categorized rendering of experience
+// CATEGORIZED EXPERIENCE
 function renderExperiences() {
   const experienceContainer = document.getElementById("experience-list");
 
@@ -116,7 +116,7 @@ function renderExperiences() {
   experienceContainer.appendChild(volunteerList);
 }
 
-// Project data
+// PROJECTS DATA
 const projects = [
   {
     name: "Portfolio Website source code",
@@ -165,7 +165,7 @@ const projects = [
   }
 ];
 
-// Project rendering
+// RENDERING LOGIC
 function renderProjects() {
   const projectList = document.getElementById("project-list");
 
@@ -187,6 +187,6 @@ function renderProjects() {
   });
 }
 
-// Initialize both sections
+// INIT
 renderExperiences();
 renderProjects();
