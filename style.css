@@ -1,4 +1,48 @@
 /* style.css */
+:root[data-theme='light'] {
+  --bg: #ffffff;
+  --text: #1e293b;
+  --accent: #4f46e5;
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --hover: #dbeafe;
+}
+
+:root[data-theme='dark'] {
+  --bg: linear-gradient(135deg, #1e3a8a, #6d28d9);
+  --text: #f1f5f9;
+  --accent: #6366f1;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --hover: #a78bfa;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a, p {
+  color: var(--text);
+}
+
+.project-card,
+.experience-card {
+  background: var(--card-bg);
+}
+
+nav a:hover,
+.cv-link:hover {
+  background-color: var(--hover);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--text);
+}
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
