@@ -187,32 +187,31 @@ function renderProjects() {
   });
 }
 
-// Theme toggle
-const toggle = document.getElementById("theme-toggle");
-toggle.addEventListener("click", () => {
-  const html = document.documentElement;
-  const isDark = html.getAttribute("data-theme") === "dark";
-  html.setAttribute("data-theme", isDark ? "light" : "dark");
-  toggle.textContent = isDark ? "☀️" : "🌙";
-});
+const toggleButton = document.getElementById('theme-toggle');
+const root = document.documentElement;
 
-// Optional: persist theme (optional for GitHub Pages)
-window.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("theme");
-  if (saved) {
-    document.documentElement.setAttribute("data-theme", saved);
-    toggle.textContent = saved === "dark" ? "🌙" : "☀️";
-  }
-});
+const symbols = {
+  dark: '\u2600',  // ☀️ sun
+  light: '\u263D'  // 🌙 moon
+};
 
-toggle.addEventListener("click", () => {
-  const current = document.documentElement.getAttribute("data-theme");
-  const next = current === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-  toggle.textContent = next === "dark" ? "🌙" : "☀️";
-});
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  root.setAttribute('data-theme', savedTheme);
+  toggleButton.textContent = symbols[savedTheme];
+} else {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const defaultTheme = prefersDark ? 'dark' : 'light';
+  root.setAttribute('data-theme', defaultTheme);
+  toggleButton.textContent = symbols[defaultTheme];
+}
 
-// INIT
-renderExperiences();
-renderProjects();
+// Toggle logic
+toggleButton.addEventListener('click', () => {
+  const currentTheme = root.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  toggleButton.textContent = symbols[newTheme];
+});
