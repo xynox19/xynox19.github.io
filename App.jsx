@@ -1,10 +1,10 @@
 // App.jsx
 import { useState, useEffect } from 'react';
-import Header from './components/Header';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Header from './src/components/Header';
+import About from './src/components/About';
+import Experience from './src/components/Experience';
+import Projects from './src/components/Projects';
+import Contact from './src/components/Contact';
 import '.public//style.css';
 
 function App() {
