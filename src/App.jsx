@@ -5,7 +5,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import './style.css';
+import '.public//style.css';
 
 function App() {
   const [theme, setTheme] = useState(() => {
