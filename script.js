@@ -1,6 +1,30 @@
 // EXPERIENCE DATA
 const experiences = [
   {
+    company: "Civica",
+    position: "Summer Intern",
+    date: "Summer 2025",
+    location: "UK",
+    description: [
+      "Held meetings with education consortia & local councils to gather user insights & requirements successfully.",
+      "Supported OPAC system configuration, support tickets, and KBA creation alongside the Libraries Team.",
+      "Created account plan summaries for SELMS & presented long-term enhancement plans for contract holders.",
+      "Contributed to OPAC feature development, attended sprint planning, and received training in UI styling."
+    ],
+  },
+  {
+    company: "Bright Network",
+    position: "Technology Internship",
+    date: "July 2025",
+    location: "Virtual",
+    description: [
+      "Gained industry insights from leading employers including Google, Lloyds Banking Group, MI5, MI6 & GCHQ, and more.",
+      "Participated in a Sector Skills Project, solving a real-world challenge and presenting findings to industry professionals.",
+      "Attended skill-building workshops, sector deep-dive sessions, and networking opportunities with graduates, senior leaders, and early careers teams.",
+      "Developed key skills including problem-solving, teamwork, public speaking, and technical analysis. Awarded an industry-recognised certificate of completion."
+    ]
+  }
+  {
     company: "Three UK",
     position: "Technology Work Experience",
     date: "June 2024",
