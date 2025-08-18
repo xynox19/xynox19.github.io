@@ -23,7 +23,7 @@ const experiences = [
       "Attended skill-building workshops, sector deep-dive sessions, and networking opportunities with graduates, senior leaders, and early careers teams.",
       "Developed key skills including problem-solving, teamwork, public speaking, and technical analysis. Awarded an industry-recognised certificate of completion."
     ]
-  }
+  },
   {
     company: "Three UK",
     position: "Technology Work Experience",
