@@ -94,6 +94,17 @@ const experiences = [
       "Helped set up a computer lab in an Orissa-based orphanage.",
     ],
   },
+  {
+    company: "Air Training Cadets",
+    position: "Volunteer",
+    date: "Sep 2018 - Jan 2021",
+    location: "Squadron 1996, Earley",
+    description: [
+      "Worked in security shifts for firework shows, marathons, and other local events.",
+      "Assisted civilians with charity work, giving second-hand items to the disadvantaged.",
+      "Attended remembrance day parades to pay respects and to aid civilians with any issues."
+    ]
+  }
 ];
 
 // CATEGORIZED EXPERIENCE
