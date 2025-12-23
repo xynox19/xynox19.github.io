@@ -1,6 +1,28 @@
 // data/experience.js
 export const experiences = [
   {
+    company: "Coventry University",
+    position: "Student Ambassador",
+    date: "Nov 2025 - Present",
+    location: "Coventry, UK",
+    description: [
+      "Trained in safeguarding, touring, social media assistance and call campaigns.",
+      "Represented the university at open days, campus tours, and online events."
+    ],
+  },
+  {
+    company: "CIVICA Ltd.",
+    position: "Intern",
+    date: "July - Aug 2024",
+    location: "Waterloo, London, UK",
+    description: [
+      "Facilitated OPAC system configuration, 313 support tickets, & created 8 KBAs alongside the Libraries Team.",
+      "Held 3 meetings with education consortia & councils to gather user insights & requirements successfully.",
+      "Created account plan summaries for SELMS and MoE Singapore & presented long-term enhancement plans for contract holders, assisting a $6bn dollar deal presentation with an overseas government.",
+      "Co-ordinated OPAC feature development, attended sprint planning, and received training in UI styling.",
+    ],
+  },
+  {
     company: "Three UK",
     position: "Technology Work Experience",
     date: "June 2024",
