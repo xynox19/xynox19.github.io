@@ -7,7 +7,9 @@ export const experiences = [
     location: "Coventry, UK",
     description: [
       "Trained in safeguarding, touring, social media assistance and call campaigns.",
-      "Represented the university at open days, campus tours, and online events."
+      "Represented the university at open days, campus tours, and online events.",
+      "Assisted 500+ prspective students and grads with enrolment, responding to queries in person and via call campaigns.",
+      "Assisted with marketing campaigns and client engagement"
     ],
   },
   {
@@ -18,7 +20,7 @@ export const experiences = [
     description: [
       "Facilitated OPAC system configuration, 313 support tickets, & created 8 KBAs alongside the Libraries Team.",
       "Held 3 meetings with education consortia & councils to gather user insights & requirements successfully.",
-      "Created account plan summaries for SELMS and MoE Singapore & presented long-term enhancement plans for contract holders, assisting a $6bn dollar deal presentation with an overseas government.",
+      "Created account plan summaries for SELMS & presented long-term enhancement plans for contract holders, assisting a $6bn dollar deal presentation with an overseas government.",
       "Co-ordinated OPAC feature development, attended sprint planning, and received training in UI styling.",
     ],
   },
