@@ -1,12 +1,11 @@
 // src/App.jsx
 import { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import './style.css'; // Make sure style.css is in src/
+import './style.css';
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
@@ -19,19 +18,21 @@ function App() {
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   return (
-    <HashRouter>
-      <div className="app">
-        <Header toggleTheme={toggleTheme} currentTheme={theme} />
-        <main className="container">
-          <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-      </div>
-    </HashRouter>
+    <div className="app">
+      <Header toggleTheme={toggleTheme} currentTheme={theme} />
+      <main className="container">
+        <About />
+        <section className="section cv" id="cv">
+          <h2>Curriculum Vitae</h2>
+          <a className="cv-link" href="cv.pdf" target="_blank" rel="noopener noreferrer">
+            Download CV
+          </a>
+        </section>
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+    </div>
   );
 }
 
