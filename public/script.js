@@ -1,6 +1,16 @@
 // EXPERIENCE DATA
 const experiences = [
   {
+    company: "Coventry University",
+    position: "Student Ambassador",
+    date: "Nov 2025 - Present",
+    location: "Coventry, UK",
+    description: [
+      "First point of contact for 90+ prospective students; campus tours & enrolment support",
+      "Trained in safeguarding, tours and social media assistance"
+    ],
+  },
+  {
     company: "Three UK",
     position: "Technology Work Experience",
     date: "June 2024",
@@ -102,7 +112,8 @@ function renderExperiences() {
       "Volunteer",
       "Executive Officer",
       "Tutor",
-      "Exam Paper Creator"
+      "Exam Paper Creator",
+      "Student Ambassador"
     ].some(role => exp.position.includes(role));
 
     if (isVolunteer) {
