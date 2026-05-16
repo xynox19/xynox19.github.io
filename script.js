@@ -1,9 +1,10 @@
+// Root script.js — copied from public/script.js to make index.html load dynamic content
 // EXPERIENCE DATA
 const experiences = [
   {
     company: "Coventry University",
     position: "Student Ambassador",
-    date: "Nov 2025 - Present",
+    date: "Nov 2025 – Present",
     location: "Coventry, UK",
     description: [
       "First point of contact for 90+ prospective students; campus tours & enrolment support",
@@ -23,7 +24,7 @@ const experiences = [
   {
     company: "CyberWomen Coventry",
     position: "Executive Officer",
-    date: "Sept 2024 - Present",
+    date: "Sept 2024 – Present",
     location: "Coventry, UK",
     description: [
       "Engaged in STEM outreach and technical leadership.",
