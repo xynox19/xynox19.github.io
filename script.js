@@ -1,28 +1,14 @@
 // EXPERIENCE DATA
 const experiences = [
   {
-    company: "Civica",
-    position: "Summer Intern",
-    date: "Summer 2025",
-    location: "UK",
+    company: "Coventry University",
+    position: "Student Ambassador",
+    date: "Nov 2025 - Present",
+    location: "Coventry, UK",
     description: [
-      "Held meetings with education consortia & local councils to gather user insights & requirements successfully.",
-      "Supported OPAC system configuration, support tickets, and KBA creation alongside the Libraries Team.",
-      "Created account plan summaries for SELMS & presented long-term enhancement plans for contract holders.",
-      "Contributed to OPAC feature development, attended sprint planning, and received training in UI styling."
+      "First point of contact for 90+ prospective students; campus tours & enrolment support",
+      "Trained in safeguarding, tours and social media assistance"
     ],
-  },
-  {
-    company: "Bright Network",
-    position: "Technology Internship",
-    date: "July 2025",
-    location: "Virtual",
-    description: [
-      "Gained industry insights from leading employers including Google, Lloyds Banking Group, MI5, MI6 & GCHQ, and more.",
-      "Participated in a Sector Skills Project, solving a real-world challenge and presenting findings to industry professionals.",
-      "Attended skill-building workshops, sector deep-dive sessions, and networking opportunities with graduates, senior leaders, and early careers teams.",
-      "Developed key skills including problem-solving, teamwork, public speaking, and technical analysis. Awarded an industry-recognised certificate of completion."
-    ]
   },
   {
     company: "Three UK",
@@ -37,7 +23,7 @@ const experiences = [
   {
     company: "CyberWomen Coventry",
     position: "Executive Officer",
-    date: "Sept 2024 – Present",
+    date: "Sept 2024 - Present",
     location: "Coventry, UK",
     description: [
       "Engaged in STEM outreach and technical leadership.",
@@ -94,17 +80,6 @@ const experiences = [
       "Helped set up a computer lab in an Orissa-based orphanage.",
     ],
   },
-  {
-    company: "Air Training Cadets",
-    position: "Volunteer",
-    date: "Sep 2018 - Jan 2021",
-    location: "Squadron 1996, Earley",
-    description: [
-      "Worked in security shifts for firework shows, marathons, and other local events.",
-      "Assisted civilians with charity work, giving second-hand items to the disadvantaged.",
-      "Attended remembrance day parades to pay respects and to aid civilians with any issues."
-    ]
-  }
 ];
 
 // CATEGORIZED EXPERIENCE
@@ -137,7 +112,8 @@ function renderExperiences() {
       "Volunteer",
       "Executive Officer",
       "Tutor",
-      "Exam Paper Creator"
+      "Exam Paper Creator",
+      "Student Ambassador"
     ].some(role => exp.position.includes(role));
 
     if (isVolunteer) {
