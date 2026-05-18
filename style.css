@@ -1,3 +1,13 @@
+/* FIXEDSYS WEB FONT */
+@font-face {
+  font-family: 'Fixedsys';
+  src: url('https://cdn.jsdelivr.net/npm/fixedsys-excelsior-301@1.0.0/woff2/FixedsysExcelsior301-Regular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/npm/fixedsys-excelsior-301@1.0.0/woff/FixedsysExcelsior301-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* THEME VARIABLES */
 :root[data-theme='light'] {
   --bg: #ffffff;
