@@ -198,6 +198,33 @@ function renderProjects() {
   });
 }
 
+// THEME TOGGLE
+function initThemeToggle() {
+  const htmlElement = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) return;
+
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme || htmlElement.getAttribute('data-theme') || 'dark';
+  htmlElement.setAttribute('data-theme', initialTheme);
+  updateThemeToggleIcon(initialTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeToggleIcon(newTheme);
+  });
+}
+
+function updateThemeToggleIcon(theme) {
+  const themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) return;
+  themeToggle.textContent = theme === 'dark' ? '☽' : '☀';
+}
+
 // INIT
+initThemeToggle();
 renderExperiences();
 renderProjects();
