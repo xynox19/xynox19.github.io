@@ -53,7 +53,7 @@ const experiences = [
   {
     company: "College of VCP",
     position: "Exam Paper Creator (Commission-Based)",
-    date: "Jan 2023 – Aug 2024",
+    date: "Jan 2023 - Aug 2024",
     location: "Reading, UK",
     description: [
       "Created mock 11+ papers and answer sheets.",
@@ -63,7 +63,7 @@ const experiences = [
   {
     company: "XL Education",
     position: "Tutor",
-    date: "Dec 2019 – Oct 2021 & May 2024 – Jul 2024",
+    date: "Dec 2019 - Oct 2021 & May 2024 - Jul 2024",
     location: "Reading, UK",
     description: [
       "Tutored students in English, Maths, VR, NVR, and Creative Writing.",
