@@ -86,6 +86,8 @@ const experiences = [
 function renderExperiences() {
   const experienceContainer = document.getElementById("experience-list");
 
+  experienceContainer.innerHTML = '';
+
   const industryList = document.createElement("div");
   const volunteerList = document.createElement("div");
 
@@ -97,7 +99,13 @@ function renderExperiences() {
   volunteerHeading.textContent = "Volunteering & Leadership";
   volunteerList.appendChild(volunteerHeading);
 
-  experiences.forEach((exp) => {
+  // helper to detect volunteer roles
+  const isVolunteerPosition = (pos) => {
+    return ["Volunteer", "Executive Officer", "Tutor", "Exam Paper Creator", "Student Ambassador"]
+      .some(role => pos.includes(role));
+  };
+
+  const makeCard = (exp) => {
     const card = document.createElement("div");
     card.className = "experience-card";
     card.innerHTML = `
@@ -107,21 +115,14 @@ function renderExperiences() {
         ${exp.description.map(item => `<li>${item}</li>`).join("")}
       </ul>
     `;
+    return card;
+  };
 
-    const isVolunteer = [
-      "Volunteer",
-      "Executive Officer",
-      "Tutor",
-      "Exam Paper Creator",
-      "Student Ambassador"
-    ].some(role => exp.position.includes(role));
+  const firstIndustry = experiences.find(exp => !isVolunteerPosition(exp.position));
+  const firstVolunteer = experiences.find(exp => isVolunteerPosition(exp.position));
 
-    if (isVolunteer) {
-      volunteerList.appendChild(card);
-    } else {
-      industryList.appendChild(card);
-    }
-  });
+  if (firstIndustry) industryList.appendChild(makeCard(firstIndustry));
+  if (firstVolunteer) volunteerList.appendChild(makeCard(firstVolunteer));
 
   experienceContainer.appendChild(industryList);
   experienceContainer.appendChild(volunteerList);
