@@ -68,14 +68,6 @@ const experiences = [
     description: [
       "Tutored students in English, Maths, VR, NVR, and Creative Writing.",
       "Supported 11+ exam prep with detailed feedback and mentorship.",
-    ],
-  },
-  {
-    company: "Ek-Asha Charity",
-    position: "Volunteer",
-    date: "Summer 2020 & 2021",
-    location: "UK & India",
-    description: [
       "Taught Scratch and Python to students in underprivileged areas.",
       "Helped set up a computer lab in an Orissa-based orphanage.",
     ],
