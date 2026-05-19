@@ -43,6 +43,10 @@
 }
 
 /* GLOBAL STYLES */
+html {
+  font-size: 100%;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -54,7 +58,7 @@ body {
   background: var(--bg);
   color: var(--text);
   transition: background 0.3s, color 0.3s;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .section::before {
@@ -132,6 +136,10 @@ nav a.flash {
   color: var(--text);
 }
 
+html {
+  font-size: 100%;
+}
+
 /* CONTAINER */
 .container {
   max-width: 960px;
@@ -173,7 +181,7 @@ h2.highlight {
 }
 
 p, a {
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #e2e8f0;
 }
@@ -265,6 +273,63 @@ a:hover {
 .experience-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 1.4rem 0;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  nav a,
+  #theme-toggle {
+    margin: 0.25rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  header p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p,
+  a {
+    font-size: 1rem;
+  }
+
+  nav {
+    gap: 0.5rem;
+  }
+
+  .socials {
+    gap: 1rem;
+  }
 }
 
 /* FOOTER */
