@@ -50,7 +50,7 @@ body{background:var(--c1);display:flex;flex-direction:column}
 @keyframes win-open{from{transform:scale(0.88);opacity:0}to{transform:scale(1);opacity:1}}
 
 .win-bar{height:30px;background:var(--win-bar);border-bottom:3px solid var(--win-border);display:flex;align-items:center;padding:0 8px;gap:7px;cursor:move;user-select:none;flex-shrink:0}
-.win-title{flex:1;font-size:14px;color:var(--text);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.win-title{flex:1;font-size:16px;color:var(--text);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .win-btn{width:13px;height:13px;border:2px solid;cursor:pointer;flex-shrink:0;transition:transform 0.05s}
 .win-btn:hover{transform:scale(1.25)}
 .win-btn:active{transform:scale(0.88)}
@@ -58,64 +58,64 @@ body{background:var(--c1);display:flex;flex-direction:column}
 .btn-min{border-color:var(--yel);background:var(--yel)}
 .btn-max{border-color:var(--grn);background:var(--grn)}
 
-.win-body{flex:1;overflow-y:auto;padding:14px;font-size:14px;line-height:1.9;color:var(--text);scrollbar-width:thin;scrollbar-color:var(--c4) var(--c2)}
+.win-body{flex:1;overflow-y:auto;padding:14px;font-size:18px;line-height:1.9;color:var(--text);scrollbar-width:thin;scrollbar-color:var(--c4) var(--c2)}
 .win-body::-webkit-scrollbar{width:5px}
 .win-body::-webkit-scrollbar-track{background:var(--c2)}
 .win-body::-webkit-scrollbar-thumb{background:var(--c4)}
 .win-resize{position:absolute;bottom:0;right:0;width:14px;height:14px;cursor:nwse-resize;background:linear-gradient(135deg,transparent 50%,var(--c4) 50%)}
 
 /* CONTENT */
-.lbl{font-size:8px;color:var(--acc);margin-bottom:8px;display:block}
+.lbl{font-size:12px;color:var(--acc);margin-bottom:8px;display:block}
 .stat{display:flex;align-items:center;gap:7px;margin-bottom:9px}
-.stat-name{font-size:6px;color:var(--dim);min-width:70px}
+.stat-name{font-size:10px;color:var(--dim);min-width:70px}
 .stat-track{flex:1;height:8px;background:var(--c2);border:2px solid var(--c3)}
 .stat-fill{height:100%}
-.stat-val{font-size:6px;color:var(--text);min-width:18px;text-align:right}
+.stat-val{font-size:10px;color:var(--text);min-width:18px;text-align:right}
 .bp{background:var(--acc2)}.bc{background:var(--pnk)}.bs{background:var(--grn)}.bm{background:var(--acc)}.bq{background:var(--yel)}.bj{background:var(--teal)}
 
 .exp-item{background:var(--c2);border:2px solid var(--c3);border-left:4px solid var(--acc);padding:11px;margin-bottom:11px}
 .exp-item.g{border-left-color:var(--grn)}.exp-item.y{border-left-color:var(--yel)}.exp-item.p{border-left-color:var(--pnk)}.exp-item.t{border-left-color:var(--teal)}
-.exp-role{font-size:8px;color:var(--acc);margin-bottom:3px}
+.exp-role{font-size:12px;color:var(--acc);margin-bottom:3px}
 .exp-item.g .exp-role{color:var(--grn)}.exp-item.y .exp-role{color:var(--yel)}.exp-item.p .exp-role{color:var(--pnk)}.exp-item.t .exp-role{color:var(--teal)}
-.exp-co{font-size:6px;color:var(--acc2);margin-bottom:3px}
-.exp-date{font-size:5px;color:var(--dim);margin-bottom:7px}
+.exp-co{font-size:10px;color:var(--acc2);margin-bottom:3px}
+.exp-date{font-size:8px;color:var(--dim);margin-bottom:7px}
 .exp-item ul{list-style:none;padding:0}
-.exp-item li{font-size:6px;color:var(--text);padding-left:10px;position:relative;margin-bottom:4px;line-height:1.7}
+.exp-item li{font-size:10px;color:var(--text);padding-left:10px;position:relative;margin-bottom:4px;line-height:1.7}
 .exp-item li::before{content:'▸';position:absolute;left:0;color:var(--acc);font-size:10px}
 
 .proj{background:var(--c2);border:2px solid var(--c3);padding:11px;margin-bottom:10px;transition:border-color 0.1s}
 .proj:hover{border-color:var(--acc)}
-.proj-title{font-size:8px;color:var(--acc);margin-bottom:5px}
-.proj-desc{font-size:6px;color:var(--dim);line-height:1.8;margin-bottom:7px}
+.proj-title{font-size:12px;color:var(--acc);margin-bottom:5px}
+.proj-desc{font-size:10px;color:var(--dim);line-height:1.8;margin-bottom:7px}
 .tags{display:flex;flex-wrap:wrap;gap:3px}
-.tag{font-size:5px;padding:2px 4px;background:var(--c3);border:1px solid var(--c4);color:var(--acc2)}
+.tag{font-size:8px;padding:2px 4px;background:var(--c3);border:1px solid var(--c4);color:var(--acc2)}
 
 .sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px;margin-bottom:14px}
 .sk{background:var(--c2);border:2px solid var(--c3);padding:7px;text-align:center;transition:border-color 0.1s}
 .sk:hover{border-color:var(--acc)}
 .sk-ic{font-size:17px;margin-bottom:3px;display:block}
-.sk-nm{font-size:5px;color:var(--dim)}
+.sk-nm{font-size:8px;color:var(--dim)}
 
 .cert{background:var(--c2);border:2px solid var(--c3);border-left:4px solid var(--yel);padding:9px;margin-bottom:7px;display:flex;gap:8px;align-items:flex-start}
 .cert.b{border-left-color:var(--acc2)}.cert.a{border-left-color:var(--acc)}.cert.p{border-left-color:var(--pnk)}
 .cert-ic{font-size:16px;flex-shrink:0}
-.cert-nm{font-size:6px;color:var(--text);margin-bottom:2px}
-.cert-by{font-size:5px;color:var(--dim)}
+.cert-nm{font-size:10px;color:var(--text);margin-bottom:2px}
+.cert-by{font-size:8px;color:var(--dim)}
 
-.terminal{background:var(--c0);border:2px solid var(--c3);padding:11px;font-size:7px;line-height:2;color:var(--grn)}
+.terminal{background:var(--c0);border:2px solid var(--c3);padding:11px;font-size:11px;line-height:2;color:var(--grn)}
 .terminal .pr{color:var(--acc2)}.terminal .cm{color:var(--text)}.terminal .ou{color:var(--dim)}
 
-.clink{display:flex;align-items:center;gap:9px;background:var(--c2);border:2px solid var(--c3);padding:9px 11px;margin-bottom:7px;text-decoration:none;color:var(--text);font-size:7px;transition:border-color 0.1s,background 0.1s}
+.clink{display:flex;align-items:center;gap:9px;background:var(--c2);border:2px solid var(--c3);padding:9px 11px;margin-bottom:7px;text-decoration:none;color:var(--text);font-size:11px;transition:border-color 0.1s,background 0.1s}
 .clink:hover{border-color:var(--acc);background:var(--c3)}
 
 /* TASKBAR */
 #taskbar{height:42px;background:var(--c1);border-top:3px solid var(--c4);display:flex;align-items:center;padding:0 10px;gap:7px;flex-shrink:0;z-index:500}
-#start-btn{background:var(--acc);color:var(--c0);border:none;padding:5px 9px;font-family: "Fixedsys", "Fixedsys Excelsior", monospace;font-size:7px;cursor:pointer;white-space:nowrap;border-right:2px solid rgba(0,0,0,0.3);border-bottom:2px solid rgba(0,0,0,0.3);flex-shrink:0;transition:transform 0.05s,background 0.1s}
+#start-btn{background:var(--acc);color:var(--c0);border:none;padding:5px 9px;font-family: "Fixedsys", "Fixedsys Excelsior", monospace;font-size:10px;cursor:pointer;white-space:nowrap;border-right:2px solid rgba(0,0,0,0.3);border-bottom:2px solid rgba(0,0,0,0.3);flex-shrink:0;transition:transform 0.05s,background 0.1s}
 #start-btn:hover{background:var(--pnk)}
 #start-btn:active{transform:translate(1px,1px)}
 .tb-sep{width:2px;height:26px;background:var(--c4);flex-shrink:0}
 #tb-apps{display:flex;align-items:center;gap:4px;overflow:hidden;flex:1}
-.tb-btn{height:30px;padding:0 9px;background:transparent;border:2px solid transparent;font-family: "Fixedsys", "Fixedsys Excelsior", monospace;font-size:5px;color:var(--dim);cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;transition:color 0.1s,border-color 0.1s,background 0.1s}
+.tb-btn{height:30px;padding:0 9px;background:transparent;border:2px solid transparent;font-family: "Fixedsys", "Fixedsys Excelsior", monospace;font-size:8px;color:var(--dim);cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;transition:color 0.1s,border-color 0.1s,background 0.1s}
 .tb-btn:hover{color:var(--text);border-color:var(--c4);background:var(--c2)}
 .tb-btn.active{color:var(--acc);border-color:var(--acc);background:var(--c2)}
 #clock{margin-left:auto;font-size:7px;color:var(--dim);white-space:nowrap;flex-shrink:0}
@@ -132,7 +132,7 @@ body{background:var(--c1);display:flex;flex-direction:column}
 #boot{position:fixed;inset:0;background:var(--c0);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.4s}
 #boot.done{opacity:0;pointer-events:none}
 .boot-logo{font-size:clamp(13px,3vw,22px);color:var(--acc);margin-bottom:22px;text-align:center;line-height:1.6}
-.boot-log{font-size:6px;color:var(--grn);width:min(380px,90vw);text-align:left;margin-bottom:22px;height:72px;overflow:hidden}
+.boot-log{font-size:10px;color:var(--grn);width:min(380px,90vw);text-align:left;margin-bottom:22px;height:72px;overflow:hidden}
 .boot-log div{animation:fi 0.1s both}
 .boot-bar-wrap{width:min(280px,80vw);height:12px;background:var(--c2);border:3px solid var(--c4);overflow:hidden}
 .boot-bar{height:100%;width:0%;background:var(--acc);animation:bf 2.6s ease-out forwards}
@@ -140,7 +140,7 @@ body{background:var(--c1);display:flex;flex-direction:column}
 @keyframes fi{from{opacity:0}to{opacity:1}}
 
 /* NOTIF */
-.notif{position:fixed;bottom:52px;right:10px;background:var(--c2);border:2px solid var(--acc);padding:9px 11px;font-size:7px;color:var(--text);z-index:2000;animation:ni 0.15s steps(3) both,no 0.3s 3.5s steps(3) forwards;max-width:230px;line-height:1.8;box-shadow:var(--shadow)}
+.notif{position:fixed;bottom:52px;right:10px;background:var(--c2);border:2px solid var(--acc);padding:9px 11px;font-size:11px;color:var(--text);z-index:2000;animation:ni 0.15s steps(3) both,no 0.3s 3.5s steps(3) forwards;max-width:230px;line-height:1.8;box-shadow:var(--shadow)}
 @keyframes ni{from{transform:translateX(110%)}to{transform:translateX(0)}}
 @keyframes no{to{transform:translateX(110%);opacity:0}}
 
@@ -154,10 +154,10 @@ body{background:var(--c1);display:flex;flex-direction:column}
 
 <!-- BOOT -->
 <div id="boot">
-  <div class="boot-logo">SAANVI OS v1.0<br/><span style="font-size:8px;color:var(--dim)">personal computing environment</span></div>
+  <div class="boot-logo">SAANVI OS v1.0<br/><span style="font-size:12px;color:var(--dim)">personal computing environment</span></div>
   <div class="boot-log" id="boot-log"></div>
   <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
-  <div style="font-size:6px;color:var(--dim);margin-top:10px">loading . . .</div>
+  <div style="font-size:10px;color:var(--dim);margin-top:10px">loading . . .</div>
 </div>
 
 <!-- BACK BUTTON -->
