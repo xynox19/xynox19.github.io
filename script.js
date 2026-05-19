@@ -110,12 +110,11 @@ function renderExperiences() {
     return card;
   };
 
-  const firstIndustry = experiences.find(exp => !isVolunteerPosition(exp.position));
-  const firstVolunteer = experiences.find(exp => isVolunteerPosition(exp.position));
+  const industryExps = experiences.filter(exp => !isVolunteerPosition(exp.position));
+  const volunteerExps = experiences.filter(exp => isVolunteerPosition(exp.position));
 
-  if (firstIndustry) industryList.appendChild(makeCard(firstIndustry));
-  if (firstVolunteer) volunteerList.appendChild(makeCard(firstVolunteer));
-
+  industryExps.forEach(exp => industryList.appendChild(makeCard(exp)));
+  volunteerExps.forEach(exp => volunteerList.appendChild(makeCard(exp)));
   experienceContainer.appendChild(industryList);
   experienceContainer.appendChild(volunteerList);
 }
