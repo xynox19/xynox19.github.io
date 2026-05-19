@@ -77,7 +77,7 @@ header {
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 500;
   font-family: 'Fixedsys', 'Courier New', Courier, monospace;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

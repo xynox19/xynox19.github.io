@@ -4,6 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>SAANVI OS v1.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -13,13 +15,14 @@
   --red:#f38ba8;--pnk:#f5c2e7;--teal:#94e2d5;
   --win-bar:#1e2438;--win-bg:#161b2e;--win-border:#334566;
   --shadow:4px 4px 0 #0a0c14;
-  --sys-font: "Fixedsys", "Fixedsys Excelsior", "PxPlus IBM VGA9", "Perfect DOS VGA 437", monospace;
+  --body-font: 'VT323', monospace;
+  --head-font: 'Press Start 2P', monospace;
 }
 html, body {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-  font-family: var(--sys-font);
+  font-family: var(--body-font);
 }
 body {
   background: var(--c1);
@@ -47,7 +50,7 @@ body {
 .icon:hover .icon-label{background:var(--acc);color:var(--c0)}
 .icon:active .icon-img{transform:scale(0.9)}
 .icon-img{width:48px;height:48px;background:var(--c2);border:3px solid var(--c4);display:flex;align-items:center;justify-content:center;font-size:22px;transition:border-color 0.1s,transform 0.08s}
-.icon-label{font-size:12px;color:var(--text);text-align:center;line-height:1.5;padding:2px 3px;background:rgba(10,12,20,0.8)}
+.icon-label{font-size:13px;color:var(--text);text-align:center;line-height:1.4;padding:2px 3px;background:rgba(10,12,20,0.8);font-family:var(--body-font)}
 
 /* WINDOWS */
 .win{position:absolute;min-width:300px;min-height:180px;background:var(--win-bg);border:3px solid var(--win-border);box-shadow:var(--shadow);display:none;flex-direction:column;z-index:100;animation:win-open 0.1s steps(3) both}
@@ -55,8 +58,8 @@ body {
 .win.focused{border-color:var(--acc);z-index:200}
 @keyframes win-open{from{transform:scale(0.88);opacity:0}to{transform:scale(1);opacity:1}}
 
-.win-bar{height:30px;background:var(--win-bar);border-bottom:3px solid var(--win-border);display:flex;align-items:center;padding:0 8px;gap:7px;cursor:move;user-select:none;flex-shrink:0}
-.win-title{flex:1;font-size:16px;color:var(--text);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.win-bar{height:32px;background:var(--win-bar);border-bottom:3px solid var(--win-border);display:flex;align-items:center;padding:0 8px;gap:7px;cursor:move;user-select:none;flex-shrink:0}
+.win-title{flex:1;font-size:11px;color:var(--text);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-family:var(--head-font)}
 .win-btn{width:13px;height:13px;border:2px solid;cursor:pointer;flex-shrink:0;transition:transform 0.05s}
 .win-btn:hover{transform:scale(1.25)}
 .win-btn:active{transform:scale(0.88)}
@@ -64,81 +67,82 @@ body {
 .btn-min{border-color:var(--yel);background:var(--yel)}
 .btn-max{border-color:var(--grn);background:var(--grn)}
 
-.win-body{flex:1;overflow-y:auto;padding:14px;font-size:18px;line-height:1.9;color:var(--text);scrollbar-width:thin;scrollbar-color:var(--c4) var(--c2)}
+.win-body{flex:1;overflow-y:auto;padding:14px;font-size:20px;line-height:1.7;color:var(--text);scrollbar-width:thin;scrollbar-color:var(--c4) var(--c2)}
 .win-body::-webkit-scrollbar{width:5px}
 .win-body::-webkit-scrollbar-track{background:var(--c2)}
 .win-body::-webkit-scrollbar-thumb{background:var(--c4)}
 .win-resize{position:absolute;bottom:0;right:0;width:14px;height:14px;cursor:nwse-resize;background:linear-gradient(135deg,transparent 50%,var(--c4) 50%)}
 
 /* CONTENT */
-.lbl{font-size:12px;color:var(--acc);margin-bottom:8px;display:block}
+.lbl{font-size:13px;color:var(--acc);margin-bottom:8px;display:block;font-family:var(--head-font)}
 .stat{display:flex;align-items:center;gap:7px;margin-bottom:9px}
-.stat-name{font-size:10px;color:var(--dim);min-width:70px}
+.stat-name{font-size:16px;color:var(--dim);min-width:90px}
 .stat-track{flex:1;height:8px;background:var(--c2);border:2px solid var(--c3)}
 .stat-fill{height:100%}
-.stat-val{font-size:10px;color:var(--text);min-width:18px;text-align:right}
+.stat-val{font-size:16px;color:var(--text);min-width:28px;text-align:right}
 .bp{background:var(--acc2)}.bc{background:var(--pnk)}.bs{background:var(--grn)}.bm{background:var(--acc)}.bq{background:var(--yel)}.bj{background:var(--teal)}
 
 .exp-item{background:var(--c2);border:2px solid var(--c3);border-left:4px solid var(--acc);padding:11px;margin-bottom:11px}
 .exp-item.g{border-left-color:var(--grn)}.exp-item.y{border-left-color:var(--yel)}.exp-item.p{border-left-color:var(--pnk)}.exp-item.t{border-left-color:var(--teal)}
-.exp-role{font-size:12px;color:var(--acc);margin-bottom:3px}
+.exp-role{font-size:13px;color:var(--acc);margin-bottom:3px;font-family:var(--head-font);line-height:1.6}
 .exp-item.g .exp-role{color:var(--grn)}.exp-item.y .exp-role{color:var(--yel)}.exp-item.p .exp-role{color:var(--pnk)}.exp-item.t .exp-role{color:var(--teal)}
-.exp-co{font-size:10px;color:var(--acc2);margin-bottom:3px}
-.exp-date{font-size:8px;color:var(--dim);margin-bottom:7px}
+.exp-co{font-size:17px;color:var(--acc2);margin-bottom:2px}
+.exp-date{font-size:15px;color:var(--dim);margin-bottom:7px}
 .exp-item ul{list-style:none;padding:0}
-.exp-item li{font-size:10px;color:var(--text);padding-left:10px;position:relative;margin-bottom:4px;line-height:1.7}
-.exp-item li::before{content:'▸';position:absolute;left:0;color:var(--acc);font-size:10px}
+.exp-item li{font-size:17px;color:var(--text);padding-left:14px;position:relative;margin-bottom:4px;line-height:1.6}
+.exp-item li::before{content:'▸';position:absolute;left:0;color:var(--acc);font-size:16px}
 
 .proj{background:var(--c2);border:2px solid var(--c3);padding:11px;margin-bottom:10px;transition:border-color 0.1s}
 .proj:hover{border-color:var(--acc)}
-.proj-title{font-size:12px;color:var(--acc);margin-bottom:5px}
-.proj-desc{font-size:10px;color:var(--dim);line-height:1.8;margin-bottom:7px}
+.proj-title{font-size:13px;color:var(--acc);margin-bottom:5px;font-family:var(--head-font);line-height:1.6}
+.proj-desc{font-size:17px;color:var(--dim);line-height:1.7;margin-bottom:7px}
 .tags{display:flex;flex-wrap:wrap;gap:3px}
-.tag{font-size:8px;padding:2px 4px;background:var(--c3);border:1px solid var(--c4);color:var(--acc2)}
+.tag{font-size:15px;padding:2px 6px;background:var(--c3);border:1px solid var(--c4);color:var(--acc2)}
 
 .sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px;margin-bottom:14px}
 .sk{background:var(--c2);border:2px solid var(--c3);padding:7px;text-align:center;transition:border-color 0.1s}
 .sk:hover{border-color:var(--acc)}
-.sk-ic{font-size:17px;margin-bottom:3px;display:block}
-.sk-nm{font-size:8px;color:var(--dim)}
+.sk-ic{font-size:20px;margin-bottom:3px;display:block}
+.sk-nm{font-size:14px;color:var(--dim)}
 
 .cert{background:var(--c2);border:2px solid var(--c3);border-left:4px solid var(--yel);padding:9px;margin-bottom:7px;display:flex;gap:8px;align-items:flex-start}
 .cert.b{border-left-color:var(--acc2)}.cert.a{border-left-color:var(--acc)}.cert.p{border-left-color:var(--pnk)}
-.cert-ic{font-size:16px;flex-shrink:0}
-.cert-nm{font-size:10px;color:var(--text);margin-bottom:2px}
-.cert-by{font-size:8px;color:var(--dim)}
+.cert-ic{font-size:20px;flex-shrink:0}
+.cert-nm{font-size:17px;color:var(--text);margin-bottom:2px}
+.cert-by{font-size:15px;color:var(--dim)}
 
-.terminal{background:var(--c0);border:2px solid var(--c3);padding:11px;font-size:11px;line-height:2;color:var(--grn)}
+.terminal{background:var(--c0);border:2px solid var(--c3);padding:11px;font-size:18px;line-height:1.8;color:var(--grn)}
 .terminal .pr{color:var(--acc2)}.terminal .cm{color:var(--text)}.terminal .ou{color:var(--dim)}
 
-.clink{display:flex;align-items:center;gap:9px;background:var(--c2);border:2px solid var(--c3);padding:9px 11px;margin-bottom:7px;text-decoration:none;color:var(--text);font-size:11px;transition:border-color 0.1s,background 0.1s}
+.clink{display:flex;align-items:center;gap:9px;background:var(--c2);border:2px solid var(--c3);padding:10px 12px;margin-bottom:7px;text-decoration:none;color:var(--text);font-size:18px;transition:border-color 0.1s,background 0.1s}
 .clink:hover{border-color:var(--acc);background:var(--c3)}
 
 /* TASKBAR */
 #taskbar{height:42px;background:var(--c1);border-top:3px solid var(--c4);display:flex;align-items:center;padding:0 10px;gap:7px;flex-shrink:0;z-index:500}
-#start-btn{background:var(--acc);color:var(--c0);border:none;padding:5px 9px;font-family: "Fixedsys", "Fixedsys Excelsior", monospace;font-size:10px;cursor:pointer;white-space:nowrap;border-right:2px solid rgba(0,0,0,0.3);border-bottom:2px solid rgba(0,0,0,0.3);flex-shrink:0;transition:transform 0.05s,background 0.1s}
+#start-btn{background:var(--acc);color:var(--c0);border:none;padding:5px 9px;font-family:var(--head-font);font-size:9px;cursor:pointer;white-space:nowrap;border-right:2px solid rgba(0,0,0,0.3);border-bottom:2px solid rgba(0,0,0,0.3);flex-shrink:0;transition:transform 0.05s,background 0.1s}
 #start-btn:hover{background:var(--pnk)}
 #start-btn:active{transform:translate(1px,1px)}
 .tb-sep{width:2px;height:26px;background:var(--c4);flex-shrink:0}
 #tb-apps{display:flex;align-items:center;gap:4px;overflow:hidden;flex:1}
-.tb-btn{height:30px;padding:0 9px;background:transparent;border:2px solid transparent;font-family: "Fixedsys", "Fixedsys Excelsior", monospace;font-size:8px;color:var(--dim);cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;transition:color 0.1s,border-color 0.1s,background 0.1s}
+.tb-btn{height:30px;padding:0 9px;background:transparent;border:2px solid transparent;font-family:var(--body-font);font-size:16px;color:var(--dim);cursor:pointer;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;transition:color 0.1s,border-color 0.1s,background 0.1s}
 .tb-btn:hover{color:var(--text);border-color:var(--c4);background:var(--c2)}
 .tb-btn.active{color:var(--acc);border-color:var(--acc);background:var(--c2)}
-#clock{margin-left:auto;font-size:7px;color:var(--dim);white-space:nowrap;flex-shrink:0}
+#clock{margin-left:auto;font-size:16px;color:var(--dim);white-space:nowrap;flex-shrink:0;font-family:var(--body-font)}
 
 /* START MENU */
-#start-menu{position:absolute;bottom:42px;left:0;width:210px;background:var(--c1);border:3px solid var(--acc);border-bottom:none;display:none;flex-direction:column;z-index:1000;box-shadow:var(--shadow)}
+#start-menu{position:absolute;bottom:42px;left:0;width:220px;background:var(--c1);border:3px solid var(--acc);border-bottom:none;display:none;flex-direction:column;z-index:1000;box-shadow:var(--shadow)}
 #start-menu.open{display:flex}
-.sm-head{background:var(--acc);padding:9px 11px;font-size:7px;color:var(--c0)}
-.sm-item{padding:7px 11px;font-size:6px;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--c3);transition:background 0.05s}
+.sm-head{background:var(--acc);padding:9px 11px;font-size:10px;color:var(--c0);font-family:var(--head-font)}
+.sm-item{padding:9px 11px;font-size:18px;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--c3);transition:background 0.05s;font-family:var(--body-font)}
 .sm-item:hover{background:var(--c2);color:var(--acc)}
-.sm-ic{font-size:14px}
+.sm-ic{font-size:18px}
 
 /* BOOT */
 #boot{position:fixed;inset:0;background:var(--c0);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.4s}
 #boot.done{opacity:0;pointer-events:none}
-.boot-logo{font-size:clamp(13px,3vw,22px);color:var(--acc);margin-bottom:22px;text-align:center;line-height:1.6}
-.boot-log{font-size:10px;color:var(--grn);width:min(380px,90vw);text-align:left;margin-bottom:22px;height:72px;overflow:hidden}
+.boot-logo{font-size:clamp(11px,2.5vw,16px);color:var(--acc);margin-bottom:22px;text-align:center;line-height:2;font-family:var(--head-font)}
+.boot-sub{font-size:clamp(10px,2vw,14px);color:var(--dim);font-family:var(--body-font)}
+.boot-log{font-size:18px;color:var(--grn);width:min(420px,90vw);text-align:left;margin-bottom:22px;height:80px;overflow:hidden;font-family:var(--body-font)}
 .boot-log div{animation:fi 0.1s both}
 .boot-bar-wrap{width:min(280px,80vw);height:12px;background:var(--c2);border:3px solid var(--c4);overflow:hidden}
 .boot-bar{height:100%;width:0%;background:var(--acc);animation:bf 2.6s ease-out forwards}
@@ -146,111 +150,35 @@ body {
 @keyframes fi{from{opacity:0}to{opacity:1}}
 
 /* NOTIF */
-.notif{position:fixed;bottom:52px;right:10px;background:var(--c2);border:2px solid var(--acc);padding:9px 11px;font-size:11px;color:var(--text);z-index:2000;animation:ni 0.15s steps(3) both,no 0.3s 3.5s steps(3) forwards;max-width:230px;line-height:1.8;box-shadow:var(--shadow)}
+.notif{position:fixed;bottom:52px;right:10px;background:var(--c2);border:2px solid var(--acc);padding:10px 12px;font-size:17px;color:var(--text);z-index:2000;animation:ni 0.15s steps(3) both,no 0.3s 3.5s steps(3) forwards;max-width:240px;line-height:1.7;box-shadow:var(--shadow);font-family:var(--body-font)}
 @keyframes ni{from{transform:translateX(110%)}to{transform:translateX(0)}}
 @keyframes no{to{transform:translateX(110%);opacity:0}}
 
 @media (max-width: 860px) {
-  #desktop {
-    min-height: calc(100vh - 52px);
-  }
-
-  #icons {
-    top: 12px;
-    left: 12px;
-    gap: 10px;
-  }
-
-  .icon {
-    width: 62px;
-    padding: 4px;
-  }
-
-  .icon-img {
-    width: 42px;
-    height: 42px;
-    font-size: 18px;
-  }
-
-  .icon-label {
-    font-size: 10px;
-  }
-
-  .win {
-    min-width: 240px;
-    min-height: 170px;
-  }
-
-  .win-bar {
-    height: 28px;
-    padding: 0 6px;
-  }
-
-  .win-title {
-    font-size: 14px;
-  }
-
-  .win-body {
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  #taskbar {
-    height: 44px;
-    padding: 0 8px;
-  }
-
-  #start-btn {
-    font-size: 9px;
-    padding: 4px 8px;
-  }
-
-  .tb-btn {
-    font-size: 7px;
-    padding: 0 7px;
-  }
-
-  #clock {
-    font-size: 6px;
-  }
+  #desktop{min-height:calc(100vh - 52px)}
+  #icons{top:12px;left:12px;gap:10px}
+  .icon{width:62px;padding:4px}
+  .icon-img{width:42px;height:42px;font-size:18px}
+  .icon-label{font-size:12px}
+  .win{min-width:240px;min-height:170px}
+  .win-bar{height:28px;padding:0 6px}
+  .win-title{font-size:9px}
+  .win-body{padding:10px;font-size:18px}
+  #taskbar{height:44px;padding:0 8px}
+  #start-btn{font-size:8px;padding:4px 8px}
+  .tb-btn{font-size:15px;padding:0 7px}
+  #clock{font-size:15px}
 }
 
 @media (max-width: 560px) {
-  #icons {
-    left: 8px;
-    gap: 8px;
-  }
-
-  .icon {
-    width: 56px;
-  }
-
-  .icon-img {
-    width: 38px;
-    height: 38px;
-    font-size: 16px;
-  }
-
-  .icon-label {
-    font-size: 9px;
-  }
-
-  .win {
-    min-width: 200px;
-    min-height: 150px;
-  }
-
-  .win-bar {
-    height: 26px;
-  }
-
-  .win-title {
-    font-size: 12px;
-  }
-
-  .boot-logo {
-    font-size: clamp(12px, 4vw, 18px);
-  }
+  #icons{left:8px;gap:8px}
+  .icon{width:56px}
+  .icon-img{width:38px;height:38px;font-size:16px}
+  .icon-label{font-size:11px}
+  .win{min-width:200px;min-height:150px}
+  .win-bar{height:26px}
+  .win-title{font-size:8px}
+  .boot-logo{font-size:clamp(9px,3.5vw,13px)}
 }
 
 ::-webkit-scrollbar{width:5px;height:5px}
@@ -263,33 +191,33 @@ body {
 
 <!-- BOOT -->
 <div id="boot">
-  <div class="boot-logo">SAANVI OS v1.0<br/><span style="font-size:12px;color:var(--dim)">personal computing environment</span></div>
+  <div class="boot-logo">SAANVI OS v1.0<br/><span class="boot-sub">personal computing environment</span></div>
   <div class="boot-log" id="boot-log"></div>
   <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
-  <div style="font-size:10px;color:var(--dim);margin-top:10px">loading . . .</div>
+  <div style="font-size:18px;color:var(--dim);margin-top:10px;font-family:var(--body-font)">loading . . .</div>
 </div>
 
 <!-- BACK BUTTON -->
-<a href="index.html" style="position:fixed;top:10px;right:10px;z-index:9000;background:var(--acc);color:var(--c0);padding:8px 14px;text-decoration:none;font-family: 'Fixedsys', 'Fixedsys Excelsior', monospace;font-size:8px;cursor:pointer;border:2px solid transparent;transition:all 0.1s;box-shadow:var(--shadow);" onmouseover="this.style.background='var(--pnk)'" onmouseout="this.style.background='var(--acc)'">← BACK</a>
+<a href="index.html" style="position:fixed;top:10px;right:10px;z-index:9000;background:var(--acc);color:var(--c0);padding:8px 14px;text-decoration:none;font-family:var(--head-font);font-size:8px;cursor:pointer;border:2px solid transparent;transition:all 0.1s;box-shadow:var(--shadow);" onmouseover="this.style.background='var(--pnk)'" onmouseout="this.style.background='var(--acc)'">← BACK</a>
 
 <!-- DESKTOP -->
 <div id="desktop">
   <div id="icons">
-    <div class="icon" onclick="openWin('about')"><div class="icon-img">🧙</div><div class="icon-label">ABOUT.TXT</div></div>
-    <div class="icon" onclick="openWin('exp')"><div class="icon-img">📜</div><div class="icon-label">QUESTS.LOG</div></div>
-    <div class="icon" onclick="openWin('projects')"><div class="icon-img">⚗️</div><div class="icon-label">PROJECTS/</div></div>
-    <div class="icon" onclick="openWin('skills')"><div class="icon-img">⚔️</div><div class="icon-label">SKILLS.INV</div></div>
-    <div class="icon" onclick="openWin('contact')"><div class="icon-img">📡</div><div class="icon-label">CONTACT.EXE</div></div>
-    <div class="icon" onclick="openWin('cv')"><div class="icon-img">📄</div><div class="icon-label">CV.PDF</div></div>
+    <div class="icon" onclick="openWin('about')"><div class="icon-img">◆</div><div class="icon-label">ABOUT.TXT</div></div>
+    <div class="icon" onclick="openWin('exp')"><div class="icon-img">≡</div><div class="icon-label">QUESTS.LOG</div></div>
+    <div class="icon" onclick="openWin('projects')"><div class="icon-img">◇</div><div class="icon-label">PROJECTS/</div></div>
+    <div class="icon" onclick="openWin('skills')"><div class="icon-img">⚔</div><div class="icon-label">SKILLS.INV</div></div>
+    <div class="icon" onclick="openWin('contact')"><div class="icon-img">⚑</div><div class="icon-label">CONTACT.EXE</div></div>
+    <div class="icon" onclick="openWin('cv')"><div class="icon-img">✉</div><div class="icon-label">CV.PDF</div></div>
   </div>
 
   <!-- ABOUT WINDOW -->
-  <div class="win" id="win-about" style="width:470px;height:380px;top:55px;left:110px">
+  <div class="win" id="win-about" style="width:490px;height:400px;top:55px;left:110px">
     <div class="win-bar" data-win="about">
       <div class="win-btn btn-close" onclick="closeWin('about')"></div>
       <div class="win-btn btn-min" onclick="minWin('about')"></div>
       <div class="win-btn btn-max" onclick="maxWin('about')"></div>
-      <div class="win-title">🧙 ABOUT.TXT — Saanvi Sethi</div>
+      <div class="win-title">◆ ABOUT.TXT — Saanvi Sethi</div>
     </div>
     <div class="win-body">
       <div class="terminal">
@@ -301,10 +229,10 @@ body {
         <div>UNI    : Coventry University 2023-2026</div>
         <div>STATUS : <span style="color:var(--grn)">Open to grad roles from Jun 2026</span></div>
         <div class="ou">────────────────────────────────</div>
-        <div style="margin-top:6px;font-size:6px;color:var(--dim);line-height:2">
+        <div style="margin-top:6px;font-size:17px;color:var(--dim);line-height:1.8">
           Full-stack dev looking for grad roles.
         </div>
-        <div style="margin-top:6px"><span class="pr">saanvi@saanvios</span><span class="ou">:~$</span> <span class="cm"></span><span style="display:inline-block;width:7px;height:12px;background:var(--acc2);vertical-align:middle;animation:cur 1s step-end infinite"></span></div>
+        <div style="margin-top:6px"><span class="pr">saanvi@saanvios</span><span class="ou">:~$</span> <span class="cm"></span><span style="display:inline-block;width:8px;height:14px;background:var(--acc2);vertical-align:middle;animation:cur 1s step-end infinite"></span></div>
       </div>
       <div style="margin-top:14px">
         <div class="lbl">SKILL LEVELS</div>
@@ -320,12 +248,12 @@ body {
   </div>
 
   <!-- QUEST LOG -->
-  <div class="win" id="win-exp" style="width:490px;height:430px;top:75px;left:160px">
+  <div class="win" id="win-exp" style="width:500px;height:450px;top:75px;left:160px">
     <div class="win-bar" data-win="exp">
       <div class="win-btn btn-close" onclick="closeWin('exp')"></div>
       <div class="win-btn btn-min" onclick="minWin('exp')"></div>
       <div class="win-btn btn-max" onclick="maxWin('exp')"></div>
-      <div class="win-title">📜 QUESTS.LOG — Experience</div>
+      <div class="win-title">≡ QUESTS.LOG — Experience</div>
     </div>
     <div class="win-body">
       <div class="exp-item">
@@ -333,7 +261,7 @@ body {
         <div class="exp-co">Civica Ltd.</div>
         <div class="exp-date">Jul - Aug 2025 · UK &nbsp;★ MAIN QUEST</div>
         <ul>
-          <li>Supported $6bn govt contract pitch for MoE Singapore — account plans & roadmaps</li>
+          <li>Supported $6bn govt contract pitch for an overseas client — account plans & roadmaps</li>
           <li>Resolved 313 support tickets; authored 8 KBAs for OPAC library system</li>
           <li>Ran 3 discovery sessions with councils & consortia; fed into sprint planning</li>
           <li>Coordinated OPAC feature dev, attended sprints, trained in UI styling</li>
@@ -379,25 +307,25 @@ body {
   </div>
 
   <!-- PROJECTS -->
-  <div class="win" id="win-projects" style="width:450px;height:420px;top:95px;left:210px">
+  <div class="win" id="win-projects" style="width:460px;height:440px;top:95px;left:210px">
     <div class="win-bar" data-win="projects">
       <div class="win-btn btn-close" onclick="closeWin('projects')"></div>
       <div class="win-btn btn-min" onclick="minWin('projects')"></div>
       <div class="win-btn btn-max" onclick="maxWin('projects')"></div>
-      <div class="win-title">⚗️ PROJECTS/ — File Explorer</div>
+      <div class="win-title">◇ PROJECTS/ — File Explorer</div>
     </div>
     <div class="win-body">
       <div class="proj">
         <div class="proj-title">CTEM DISSERTATION</div>
         <div class="proj-desc">Dockerised vulnerable API testbed with automated attack simulation pipeline. Evaluates CTEM vs traditional threat management with reproducible academic results.</div>
         <div class="tags"><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
-        <div style="font-size:5px;color:var(--dim);margin-top:5px">⚠ Available on request (uni regulations)</div>
+        <div style="font-size:15px;color:var(--dim);margin-top:5px">▲ Available on request (uni regulations)</div>
       </div>
       <div class="proj">
         <div class="proj-title">SECURE E-COMMERCE APP</div>
         <div class="proj-desc">Full e-commerce webapp with 2FA, CSRF, SQL injection prevention, upload restrictions & logging — zero external security libs, all hand-coded.</div>
         <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span><span class="tag">Werkzeug</span></div>
-        <div style="margin-top:6px"><a href="https://github.com/xynox19" target="_blank" style="font-size:5px;color:var(--acc2);text-decoration:none">▸ github.com/xynox19</a></div>
+        <div style="margin-top:6px"><a href="https://github.com/xynox19" target="_blank" style="font-size:16px;color:var(--acc2);text-decoration:none">▸ github.com/xynox19</a></div>
       </div>
       <div class="proj">
         <div class="proj-title">MQTT SMART HOME SIM</div>
@@ -413,85 +341,85 @@ body {
         <div class="proj-title">THIS PORTFOLIO</div>
         <div class="proj-desc">Personal portfolio in React/Vite. You're looking at the pixel OS redesign.</div>
         <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">CSS</span></div>
-        <div style="margin-top:6px"><a href="https://xynox19.github.io" target="_blank" style="font-size:5px;color:var(--acc2);text-decoration:none">▸ xynox19.github.io</a></div>
+        <div style="margin-top:6px"><a href="https://xynox19.github.io" target="_blank" style="font-size:16px;color:var(--acc2);text-decoration:none">▸ xynox19.github.io</a></div>
       </div>
     </div>
     <div class="win-resize"></div>
   </div>
 
   <!-- SKILLS -->
-  <div class="win" id="win-skills" style="width:410px;height:400px;top:115px;left:260px">
+  <div class="win" id="win-skills" style="width:420px;height:420px;top:115px;left:260px">
     <div class="win-bar" data-win="skills">
       <div class="win-btn btn-close" onclick="closeWin('skills')"></div>
       <div class="win-btn btn-min" onclick="minWin('skills')"></div>
       <div class="win-btn btn-max" onclick="maxWin('skills')"></div>
-      <div class="win-title">⚔️ SKILLS.INV — Inventory</div>
+      <div class="win-title">⚔ SKILLS.INV — Inventory</div>
     </div>
     <div class="win-body">
       <div class="lbl">LANGUAGES</div>
       <div class="sgrid">
-        <div class="sk"><span class="sk-ic">🐍</span><span class="sk-nm">Python</span></div>
+        <div class="sk"><span class="sk-ic">∿</span><span class="sk-nm">Python</span></div>
         <div class="sk"><span class="sk-ic">⚙</span><span class="sk-nm">C++</span></div>
-        <div class="sk"><span class="sk-ic">🗄</span><span class="sk-nm">SQL</span></div>
-        <div class="sk"><span class="sk-ic">🌐</span><span class="sk-nm">JavaScript</span></div>
-        <div class="sk"><span class="sk-ic">📐</span><span class="sk-nm">MATLAB</span></div>
-        <div class="sk"><span class="sk-ic">🔧</span><span class="sk-nm">PHP</span></div>
-        <div class="sk"><span class="sk-ic">💻</span><span class="sk-nm">Assembly x86</span></div>
-        <div class="sk"><span class="sk-ic">🎨</span><span class="sk-nm">HTML/CSS</span></div>
+        <div class="sk"><span class="sk-ic">◫</span><span class="sk-nm">SQL</span></div>
+        <div class="sk"><span class="sk-ic">◯</span><span class="sk-nm">JavaScript</span></div>
+        <div class="sk"><span class="sk-ic">⌐</span><span class="sk-nm">MATLAB</span></div>
+        <div class="sk"><span class="sk-ic">◊</span><span class="sk-nm">PHP</span></div>
+        <div class="sk"><span class="sk-ic">▦</span><span class="sk-nm">Assembly x86</span></div>
+        <div class="sk"><span class="sk-ic">◇</span><span class="sk-nm">HTML/CSS</span></div>
       </div>
       <div class="lbl">TOOLS & PLATFORMS</div>
       <div class="sgrid" style="margin-bottom:14px">
-        <div class="sk"><span class="sk-ic">🐙</span><span class="sk-nm">GitHub</span></div>
-        <div class="sk"><span class="sk-ic">🐋</span><span class="sk-nm">Docker</span></div>
-        <div class="sk"><span class="sk-ic">☁</span><span class="sk-nm">AWS</span></div>
-        <div class="sk"><span class="sk-ic">📊</span><span class="sk-nm">PowerBI</span></div>
-        <div class="sk"><span class="sk-ic">🎨</span><span class="sk-nm">Figma</span></div>
-        <div class="sk"><span class="sk-ic">🤖</span><span class="sk-nm">TensorFlow</span></div>
-        <div class="sk"><span class="sk-ic">📡</span><span class="sk-nm">MQTT</span></div>
-        <div class="sk"><span class="sk-ic">🐧</span><span class="sk-nm">Kali Linux</span></div>
-        <div class="sk"><span class="sk-ic">🔮</span><span class="sk-nm">Oracle CI</span></div>
-        <div class="sk"><span class="sk-ic">📈</span><span class="sk-nm">RapidMiner</span></div>
+        <div class="sk"><span class="sk-ic">◈</span><span class="sk-nm">GitHub</span></div>
+        <div class="sk"><span class="sk-ic">◆</span><span class="sk-nm">Docker</span></div>
+        <div class="sk"><span class="sk-ic">◎</span><span class="sk-nm">AWS</span></div>
+        <div class="sk"><span class="sk-ic">▥</span><span class="sk-nm">PowerBI</span></div>
+        <div class="sk"><span class="sk-ic">◇</span><span class="sk-nm">Figma</span></div>
+        <div class="sk"><span class="sk-ic">◈</span><span class="sk-nm">TensorFlow</span></div>
+        <div class="sk"><span class="sk-ic">⚑</span><span class="sk-nm">MQTT</span></div>
+        <div class="sk"><span class="sk-ic">◆</span><span class="sk-nm">Kali Linux</span></div>
+        <div class="sk"><span class="sk-ic">◊</span><span class="sk-nm">Oracle CI</span></div>
+        <div class="sk"><span class="sk-ic">△</span><span class="sk-nm">RapidMiner</span></div>
       </div>
       <div class="lbl">CERTIFICATIONS & ACHIEVEMENTS</div>
-      <div class="cert"><span class="cert-ic">🏆</span><div><div class="cert-nm">UK Space Design Competition</div><div class="cert-by">Regional Winner 2022</div></div></div>
-      <div class="cert b"><span class="cert-ic">🎓</span><div><div class="cert-nm">CS50 Python + CS50 Cybersecurity</div><div class="cert-by">HarvardX</div></div></div>
-      <div class="cert b"><span class="cert-ic">☁</span><div><div class="cert-nm">AWS AI Practitioner</div><div class="cert-by" style="color:var(--grn)">In Progress</div></div></div>
-      <div class="cert a"><span class="cert-ic">🔮</span><div><div class="cert-nm">Oracle CI Foundations Associate</div><div class="cert-by">Oracle</div></div></div>
-      <div class="cert p"><span class="cert-ic">📊</span><div><div class="cert-nm">MATLAB ML · Pandas/Dask Certs</div><div class="cert-by">MathWorks · Python</div></div></div>
+      <div class="cert"><span class="cert-ic">★</span><div><div class="cert-nm">UK Space Design Competition</div><div class="cert-by">Regional Winner 2022</div></div></div>
+      <div class="cert b"><span class="cert-ic">⊗</span><div><div class="cert-nm">CS50 Python + CS50 Cybersecurity</div><div class="cert-by">HarvardX</div></div></div>
+      <div class="cert b"><span class="cert-ic">◎</span><div><div class="cert-nm">AWS AI Practitioner</div><div class="cert-by" style="color:var(--grn)">In Progress</div></div></div>
+      <div class="cert a"><span class="cert-ic">◊</span><div><div class="cert-nm">Oracle CI Foundations Associate</div><div class="cert-by">Oracle</div></div></div>
+      <div class="cert p"><span class="cert-ic">▥</span><div><div class="cert-nm">MATLAB ML · Pandas/Dask Certs</div><div class="cert-by">MathWorks · Python</div></div></div>
     </div>
     <div class="win-resize"></div>
   </div>
 
   <!-- CONTACT -->
-  <div class="win" id="win-contact" style="width:360px;height:280px;top:135px;left:310px">
+  <div class="win" id="win-contact" style="width:380px;height:310px;top:135px;left:310px">
     <div class="win-bar" data-win="contact">
       <div class="win-btn btn-close" onclick="closeWin('contact')"></div>
       <div class="win-btn btn-min" onclick="minWin('contact')"></div>
       <div class="win-btn btn-max" onclick="maxWin('contact')"></div>
-      <div class="win-title">📡 CONTACT.EXE</div>
+      <div class="win-title">⚑ CONTACT.EXE</div>
     </div>
     <div class="win-body">
-      <div style="font-size:6px;color:var(--dim);margin-bottom:13px;line-height:2">Open to grad roles, internships & collabs.<br/>Graduating June 2026. Will relocate.</div>
-      <a href="mailto:saanvi.sethi19@gmail.com" class="clink"><span class="clink-ic">📧</span>saanvi.sethi19@gmail.com</a>
-      <a href="https://linkedin.com/in/saanvi-sethi-cs" target="_blank" class="clink"><span class="clink-ic">💼</span>linkedin.com/in/saanvi-sethi-cs</a>
-      <a href="https://github.com/xynox19" target="_blank" class="clink"><span class="clink-ic">🐙</span>github.com/xynox19</a>
-      <a href="https://xynox19.github.io/cv.pdf" target="_blank" class="clink"><span class="clink-ic">📄</span>Download CV (PDF)</a>
+      <div style="font-size:17px;color:var(--dim);margin-bottom:13px;line-height:1.8">Open to grad roles, internships & collabs.<br/>Graduating June 2026. Will relocate.</div>
+      <a href="mailto:saanvi.sethi19@gmail.com" class="clink"><span>✉</span>saanvi.sethi19@gmail.com</a>
+      <a href="https://linkedin.com/in/saanvi-sethi-cs" target="_blank" class="clink"><span>◊</span>linkedin.com/in/saanvi-sethi-cs</a>
+      <a href="https://github.com/xynox19" target="_blank" class="clink"><span>◈</span>github.com/xynox19</a>
+      <a href="https://xynox19.github.io/cv.pdf" target="_blank" class="clink"><span>✉</span>Download CV (PDF)</a>
     </div>
     <div class="win-resize"></div>
   </div>
 
   <!-- CV -->
-  <div class="win" id="win-cv" style="width:320px;height:170px;top:155px;left:360px">
+  <div class="win" id="win-cv" style="width:320px;height:190px;top:155px;left:360px">
     <div class="win-bar" data-win="cv">
       <div class="win-btn btn-close" onclick="closeWin('cv')"></div>
       <div class="win-btn btn-min" onclick="minWin('cv')"></div>
       <div class="win-btn btn-max" onclick="maxWin('cv')"></div>
-      <div class="win-title">📄 CV.PDF</div>
+      <div class="win-title">✉ CV.PDF</div>
     </div>
     <div class="win-body" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
-      <div style="font-size:30px">📄</div>
-      <div style="font-size:6px;color:var(--dim);text-align:center">Saanvi_Sethi_CV.pdf &nbsp;·&nbsp; May 2026</div>
-      <a href="https://xynox19.github.io/cv.pdf" target="_blank" style="background:var(--acc);color:var(--c0);font-family:var(--sys-font);font-size:6px;padding:7px 12px;text-decoration:none;border-right:2px solid rgba(0,0,0,0.3);border-bottom:2px solid rgba(0,0,0,0.3)">▸ OPEN / DOWNLOAD</a>
+      <div style="font-size:36px">✉</div>
+      <div style="font-size:17px;color:var(--dim);text-align:center">Saanvi_Sethi_CV.pdf &nbsp;·&nbsp; May 2026</div>
+      <a href="https://xynox19.github.io/cv.pdf" target="_blank" style="background:var(--acc);color:var(--c0);font-family:var(--head-font);font-size:9px;padding:8px 14px;text-decoration:none;border-right:2px solid rgba(0,0,0,0.3);border-bottom:2px solid rgba(0,0,0,0.3)">▸ OPEN / DOWNLOAD</a>
     </div>
     <div class="win-resize"></div>
   </div>
@@ -509,19 +437,19 @@ body {
 <!-- START MENU -->
 <div id="start-menu">
   <div class="sm-head">SAANVI OS v1.0</div>
-  <div class="sm-item" onclick="openWin('about');toggleStart()"><span class="sm-ic">🧙</span>ABOUT.TXT</div>
-  <div class="sm-item" onclick="openWin('exp');toggleStart()"><span class="sm-ic">📜</span>QUESTS.LOG</div>
-  <div class="sm-item" onclick="openWin('projects');toggleStart()"><span class="sm-ic">⚗️</span>PROJECTS/</div>
-  <div class="sm-item" onclick="openWin('skills');toggleStart()"><span class="sm-ic">⚔️</span>SKILLS.INV</div>
-  <div class="sm-item" onclick="openWin('contact');toggleStart()"><span class="sm-ic">📡</span>CONTACT.EXE</div>
-  <div class="sm-item" onclick="openWin('cv');toggleStart()"><span class="sm-ic">📄</span>CV.PDF</div>
-  <div class="sm-item" style="border-top:2px solid var(--c4);color:var(--red)" onclick="toggleStart()"><span class="sm-ic">⏻</span>CLOSE MENU</div>
+  <div class="sm-item" onclick="openWin('about');toggleStart()"><span class="sm-ic">◆</span>ABOUT.TXT</div>
+  <div class="sm-item" onclick="openWin('exp');toggleStart()"><span class="sm-ic">≡</span>QUESTS.LOG</div>
+  <div class="sm-item" onclick="openWin('projects');toggleStart()"><span class="sm-ic">◇</span>PROJECTS/</div>
+  <div class="sm-item" onclick="openWin('skills');toggleStart()"><span class="sm-ic">⚔</span>SKILLS.INV</div>
+  <div class="sm-item" onclick="openWin('contact');toggleStart()"><span class="sm-ic">⚑</span>CONTACT.EXE</div>
+  <div class="sm-item" onclick="openWin('cv');toggleStart()"><span class="sm-ic">✉</span>CV.PDF</div>
+  <div class="sm-item" style="border-top:2px solid var(--c4);color:var(--red)" onclick="toggleStart()"><span class="sm-ic">◯</span>CLOSE MENU</div>
 </div>
 
 <script>
 const WINS={about:{},exp:{},projects:{},skills:{},contact:{},cv:{}};
 const LABELS={about:'ABOUT',exp:'QUESTS',projects:'PROJECTS',skills:'SKILLS',contact:'CONTACT',cv:'CV'};
-const ICONS={about:'🧙',exp:'📜',projects:'⚗️',skills:'⚔️',contact:'📡',cv:'📄'};
+const ICONS={about:'◆',exp:'≡',projects:'◇',skills:'⚔',contact:'⚑',cv:'✉'};
 for(const id in WINS){
   WINS[id].el=document.getElementById('win-'+id);
   WINS[id].open=false;WINS[id].min=false;WINS[id].maxed=false;WINS[id].prevRect=null;
@@ -648,7 +576,7 @@ setTimeout(()=>{
   setTimeout(()=>openWin('projects'),560);
   setTimeout(()=>{
     const n=document.createElement('div');n.className='notif';
-    n.innerHTML='👋 Welcome to SAANVI OS<br><span style="color:var(--dim);font-size:5px">Click icons or START to open apps. Drag titlebars to move windows.</span>';
+    n.innerHTML='👋 Welcome to SAANVI OS<br><span style="color:var(--dim);font-size:15px">Click icons or START to open apps. Drag titlebars to move windows.</span>';
     document.body.appendChild(n);setTimeout(()=>n.remove(),4000);
   },1200);
 },3100);
