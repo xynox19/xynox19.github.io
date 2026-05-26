@@ -72,7 +72,7 @@ body {
 /* HEADER */
 header {
   background-color: #0f172a;
-  color: var(--text);
+  color: #bbe7e7;
   padding: 1rem 0;
   text-align: center;
   position: sticky;
