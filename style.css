@@ -72,7 +72,7 @@ body {
 /* HEADER */
 header {
   background-color: #0f172a;
-  color: white;
+  color: var(--text);
   padding: 1rem 0;
   text-align: center;
   position: sticky;
@@ -109,19 +109,19 @@ nav {
 
 nav a {
   margin: 0 1rem;
-  color: #e0e7ff;
+  color: var(--text);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #a78bfa;
+  color: var(--accent);
 }
 
 nav a.flash {
-  background-color: #381765;
-  color: #eaedf3;
+  background-color: var(--accent);
+  color: var(--text);
   padding: 0.2rem 0.5rem;
   border-radius: 6px;
   transition: background-color 0.4s, color 0.4s;
@@ -195,8 +195,8 @@ a:hover {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.6rem 1.2rem;
-  background-color: #6366f1;
-  color: white;
+  background-color: var(--accent);
+  color: var(--text);
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -223,7 +223,7 @@ a:hover {
 }
 
 .project-card a {
-  color: #e6e3f1;
+  color: var(--text);
   text-decoration: none;
   font-weight: bold;
 }
@@ -256,7 +256,7 @@ a:hover {
 
 .experience-card .meta {
   font-size: 1.05rem;
-  color: #cbd5e1;
+  color: var(--text);
   margin-bottom: 0.5rem;
 }
 
@@ -337,7 +337,7 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 1.05rem;
-  color: #cbd5e1;
+  color: var(--text);
 }
 
 /* SOCIAL ICONS */
