@@ -10,11 +10,11 @@
 
 /* THEME VARIABLES */
 :root[data-theme='light'] {
-  --bg: #ffffff;
+  --bg: #bbe7e7;
   --text: #1e293b;
   --accent: #4f46e5;
   --card-bg: rgba(0, 0, 0, 0.05);
-  --hover: #dbeafe;
+  --hover: #ade5ec;
 }
 
 :root[data-theme='dark'] {
@@ -183,7 +183,7 @@ h2.highlight {
 p, a {
   font-size: 1rem;
   line-height: 1.6;
-  color: #e2e8f0;
+  color: var(--text);
 }
 
 a:hover {
