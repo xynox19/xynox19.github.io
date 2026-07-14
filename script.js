@@ -1,6 +1,21 @@
 // EXPERIENCE DATA
 const experiences = [
   {
+    company: "Civica Ltd.",
+    position: "SOFTWARE & PRODUCT INTERN",
+    date: "Jul - Aug 2025",
+    location: "UK",
+    expRole: "SOFTWARE & PRODUCT INTERN",
+    expCo: "Civica Ltd.",
+    expDate: "Jul - Aug 2025 · UK\u00A0★ MAIN QUEST",
+    description: [
+      "Supported $6bn govt contract pitch for an overseas client — account plans & roadmaps",
+      "Resolved 313 support tickets; authored 8 KBAs for OPAC library system",
+      "Ran 3 discovery sessions with councils & consortia; fed into sprint planning",
+      "Coordinated OPAC feature dev, attended sprints, trained in UI styling",
+    ],
+  },
+  {
     company: "Coventry University",
     position: "Student Ambassador",
     date: "Nov 2025 - Present",
@@ -100,13 +115,26 @@ function renderExperiences() {
   const makeCard = (exp) => {
     const card = document.createElement("div");
     card.className = "experience-card";
-    card.innerHTML = `
-      <h4>${exp.position} @ ${exp.company}</h4>
-      <p class="meta">${exp.date} | ${exp.location}</p>
-      <ul>
-        ${exp.description.map(item => `<li>${item}</li>`).join("")}
-      </ul>
-    `;
+
+    if (exp.expRole || exp.expCo || exp.expDate) {
+      card.innerHTML = `
+        <div class="exp-role">${exp.expRole || exp.position}</div>
+        <div class="exp-co">${exp.expCo || exp.company}</div>
+        <div class="exp-date">${exp.expDate || `${exp.date} · ${exp.location}`}</div>
+        <ul>
+          ${exp.description.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      `;
+    } else {
+      card.innerHTML = `
+        <h4>${exp.position} @ ${exp.company}</h4>
+        <p class="meta">${exp.date} | ${exp.location}</p>
+        <ul>
+          ${exp.description.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      `;
+    }
+
     return card;
   };
 
