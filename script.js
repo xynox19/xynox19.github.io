@@ -7,7 +7,7 @@ const experiences = [
     location: "UK",
     expRole: "SOFTWARE & PRODUCT INTERN",
     expCo: "Civica Ltd.",
-    expDate: "Jul - Aug 2025 · UK\u00A0★ MAIN QUEST",
+    expDate: "Jul - Aug 2025 · UK",
     description: [
       "Supported $6bn govt contract pitch for an overseas client — account plans & roadmaps",
       "Resolved 313 support tickets; authored 8 KBAs for OPAC library system",
