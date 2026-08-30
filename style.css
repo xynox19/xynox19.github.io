@@ -180,19 +180,31 @@ nav a.flash::after {
 /* CONTAINER */
 .container {
   max-width: 980px;
-  margin: 2rem auto;
+  margin: 0.75rem auto 0;
   padding: 0 1.25rem 2rem;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.85fr);
-  gap: 1.8rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1rem;
   align-items: center;
 }
 
 .about-copy {
-  padding-right: 0.5rem;
+  width: min(100%, 760px);
+  padding-right: 0;
+  text-align: left;
+}
+
+.section.about {
+  padding-top: 1rem;
+}
+
+.section.about h2 {
+  text-align: left;
+  padding-bottom: 0.75rem;
 }
 
 .about-image {
