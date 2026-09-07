@@ -187,13 +187,13 @@ nav a.flash::after {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
   gap: 1rem;
   align-items: center;
 }
 
 .about-copy {
-  width: min(100%, 760px);
+  width: 100%;
+  max-width: 760px;
   padding-right: 0;
   text-align: left;
 }
