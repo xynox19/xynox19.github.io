@@ -97,6 +97,8 @@ function renderExperiences() {
 
   const industryList = document.createElement("div");
   const volunteerList = document.createElement("div");
+  industryList.className = "experience-group";
+  volunteerList.className = "experience-group";
 
   const industryHeading = document.createElement("h3");
   industryHeading.textContent = "Professional & Industry Experience";
@@ -200,18 +202,35 @@ const projects = [
 function renderProjects() {
   const projectList = document.getElementById("project-list");
 
-  projects.forEach(project => {
+  projects.forEach((project, index) => {
     const card = document.createElement("div");
     card.className = "project-card";
 
+    const visual = document.createElement("div");
+    visual.className = `project-visual project-visual-${(index % 4) + 1}`;
+    if (project.image) {
+      const image = document.createElement("img");
+      image.src = project.image;
+      image.alt = `${project.name} project preview`;
+      visual.appendChild(image);
+    } else {
+      const placeholder = document.createElement("span");
+      placeholder.className = "project-placeholder";
+      placeholder.innerHTML = '<span aria-hidden="true">＋</span> Add project image';
+      visual.appendChild(placeholder);
+    }
+
     const link = document.createElement("a");
+    link.className = "project-title";
     link.href = project.url;
     link.textContent = project.name;
     link.target = "_blank";
+    link.rel = "noopener";
 
     const description = document.createElement("p");
     description.textContent = project.desc || "No description provided.";
 
+    card.appendChild(visual);
     card.appendChild(link);
     card.appendChild(description);
     projectList.appendChild(card);

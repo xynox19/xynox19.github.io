@@ -1,70 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saanvi Sethi | CS Portfolio</title>
+  <title>Saanvi Sethi | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Saanvi Sethi</h1>
-    <nav>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Saanvi Sethi home">
+      <span class="brand-mark">S</span>
+      <span class="brand-copy"><strong>Saanvi Sethi</strong><small>Computer Science · AI · Product</small></span>
+    </a>
+    <nav aria-label="Main navigation">
       <a href="#about">About</a>
-      <a href="#cv">CV</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="/os.html" target="_blank">PortfolioOS</a>
-      <button id="theme-toggle" aria-label="Toggle theme">◑</button>
-    </nav> 
+      <a class="nav-os" href="os.html" target="_blank" rel="noopener">PortfolioOS <span aria-hidden="true">↗</span></a>
+      <button id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">◐</button>
+    </nav>
   </header>
 
-  <div class="container">
-    <section class="section about" id="about">
-      <h2>About Me</h2>
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>Hi, I'm <strong>Saanvi</strong>, a Computer Science graduate with a passion for machine learning, AI-enabled applications, and building software that solves real problems.</p>
-          <p>I have experience in software development, product management, and data analysis, and much more. I enjoy working on projects that I can apply my expertise to, and make a difference.</p>
-          <p>In my free time, I enjoy reading, art, and exploring new technologies. I'm always looking for new challenges and opportunities to learn and grow.</p>
+  <main id="top" class="page-shell">
+    <section class="hero" id="about">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> SOFTWARE · MACHINE LEARNING · PRODUCT</p>
+        <h1>Thoughtful technology,<br><em>made useful.</em></h1>
+        <p class="hero-lede">Hi, I’m Saanvi, a Computer Science graduate who enjoys turning complex ideas into clear, human-centered software.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="mailto:saanvi.sethi19@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
         </div>
+        <div class="hero-note"><span>01 / 03</span><span>Based in Coventry, UK</span></div>
       </div>
+      <figure class="hero-portrait" aria-label="Portrait image placeholder">
+        <div class="portrait-placeholder"><span class="placeholder-mark">SS</span><span class="placeholder-caption">Add a portrait image here</span></div>
+        <figcaption><span>Curiosity first.</span><span>Always building.</span></figcaption>
+        <span class="portrait-index">PORTFOLIO · 2026</span>
+      </figure>
     </section>
 
-    <section class="section cv" id="cv">
-      <h2>Curriculum Vitae</h2>
-      <a class="cv-link" href="cv.pdf" target="_blank">Download CV</a>
-    </section>
-
-    <section class="section experience" id="experience">
-      <h2>Work Experience</h2>
-      <div id="experience-list"></div>
+    <section class="intro-band" aria-label="Introduction">
+      <p class="section-index">A LITTLE ABOUT ME</p>
+      <div class="intro-copy">
+        <p>I work across software development, product thinking, and data analysis, with a particular interest in machine learning and AI-enabled applications.</p>
+        <p>Outside of work, you’ll find me reading, making art, or exploring a new technology. I’m at my best when I can learn quickly and build something that makes a real difference.</p>
+      </div>
+      <a class="inline-arrow" href="#experience" aria-label="View experience">↓</a>
     </section>
 
     <section class="section projects" id="projects">
-      <h2>Projects</h2>
+      <div class="section-heading">
+        <div><p class="eyebrow">SELECTED WORK <span>· 2022—2026</span></p><h2>Projects with purpose.</h2></div>
+        <p class="section-aside">A selection of experiments, coursework, and ideas brought to life.</p>
+      </div>
       <div id="project-list"></div>
     </section>
 
-    <section class="section contact" id="contact">
-      <h2>Contact</h2>
-      <div class="socials">
-        <a href="https://github.com/xynox19" target="_blank" aria-label="GitHub">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
-        </a>
-        <a href="https://linkedin.com/in/saanvi-sethi-cs" target="_blank" aria-label="LinkedIn">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="mailto:saanvi.sethi19@gmail.com" target="_blank" aria-label="Email">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" />
-        </a>
-      </div>        
+    <section class="cv-band" id="cv">
+      <div><p class="eyebrow">THE FULL STORY</p><h2>Experience, skills &amp; everything in between.</h2></div>
+      <a class="button button-outline" href="cv.pdf" target="_blank" rel="noopener">Download my CV <span aria-hidden="true">↗</span></a>
     </section>
-  </div>
+
+    <section class="section experience" id="experience">
+      <div class="section-heading">
+        <div><p class="eyebrow">WHERE I’VE BEEN</p><h2>Experience &amp; impact.</h2></div>
+        <p class="section-aside">A mix of technology, product, and community work.</p>
+      </div>
+      <div id="experience-list"></div>
+    </section>
+
+    <footer class="contact-footer" id="contact">
+      <div class="footer-main">
+        <div><p class="eyebrow">HAVE A GOOD PROJECT IN MIND?</p><h2>Let’s make<br><em>something matter.</em></h2></div>
+        <a class="email-link" href="mailto:saanvi.sethi19@gmail.com">saanvi.sethi19@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Saanvi Sethi</span>
+        <div class="socials">
+          <a href="https://github.com/xynox19" target="_blank" rel="noopener" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="" /></a>
+          <a href="https://linkedin.com/in/saanvi-sethi-cs" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" /></a>
+          <a href="mailto:saanvi.sethi19@gmail.com" aria-label="Email"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="" /></a>
+        </div>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
