@@ -152,7 +152,7 @@ function renderExperiences() {
 // PROJECTS DATA
 const projects = [
   {
-    name: "Portfolio Website source code",
+    name: "Portfolio Website",
     url: "https://github.com/xynox19/xynox19.github.io",
     desc: "A modern static portfolio site showcasing my skills, experience, and projects, built with HTML, CSS, and JavaScript."
   },
@@ -162,7 +162,7 @@ const projects = [
     desc: "A work-in-progress conservation platform built for collaborative university development and wildlife impact tracking."
   },
   {
-    name: "AI-powered Chatbot",
+    name: "Chatbot for AI Education & Information",
     url: "https://github.com/xynox19/chatbot-ai-info",
     desc: "A Python Streamlit chatbot with a custom Q&A knowledge base and optional GPT fallback for unknown AI questions."
   },
@@ -177,24 +177,9 @@ const projects = [
     desc: "A Python-based MLP simulation that models training, forward/backward propagation, and weight updates from scratch."
   },
   {
-    name: "TCP Client/Server Model",
-    url: "https://github.com/xynox19/multithreading-server",
-    desc: "A multithreaded TCP server and client implementation in Python and C++ for concurrent socket communication."
-  },
-  {
     name: "Pandas/Dask Large Dataset Analysis",
     url: "https://github.coventry.ac.uk/sethis8/data-science-cw",
     desc: "A data science analysis project using Pandas and Dask to process and visualize large datasets."
-  },
-  {
-    name: "GCSE NEA - Zork-styled text adventure game",
-    url: "https://github.com/xynox19/aperture-text-game/tree/main",
-    desc: "A GCSE text-adventure game inspired by Zork, written in Python with interactive rooms and puzzles."
-  },
-  {
-    name: "GCSE NEA - Membership system",
-    url: "https://github.com/xynox19/membership-system-NEA",
-    desc: "A Python-based membership system built for GCSE coursework, with data entry, validation, and basic record management."
   }
 ];
 
